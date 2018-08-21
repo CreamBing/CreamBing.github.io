@@ -4,11 +4,11 @@
 
 # Site
 title: 技术之路
-subtitle:
-description:
-keywords:
+subtitle: java后台技术栈
+description: 深话浅说,长路慢走
+keywords: java docker springboot 微服务
 author: Cream Bing
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -81,3 +81,9 @@ deploy:
   type: git
   repo: git@github.com:CreamBing/CreamBing.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
