@@ -22,6 +22,25 @@ comments: true
 {% codeblock lang:bash %}
 mkdir -p /apps/docker/packages
 {% endcodeblock %}
+## 修改yum源镜像地址
+先看一下有没有wget ,没有先装一下，在备份
+{% codeblock lang:bash %}
+yum install wget
+{% endcodeblock %}
+备份原来的repo
+{% codeblock lang:bash %}
+cd /etc/yum.repos.d/
+mkdir backup
+mv ./CentOS-* ./backup/
+{% endcodeblock %}
+下载阿里的镜像源并应用
+{% codeblock lang:bash %}
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+yum clean all
+yum makecache
+{% endcodeblock %}
+截图:
+{% img /images/docker/aliyumrepo.png %}
 ## 下载createrepo软件包及其依赖
 {% codeblock lang:bash %}
 repotrack -a x86_64 -p /apps/docker/packages createrepo

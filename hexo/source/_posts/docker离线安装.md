@@ -11,7 +11,7 @@ categories:
 comments: true
 ---
 # 前言
-首先根据[]这篇博客准备好docker离线安装包。
+首先根据**{% post_link docker离线安装包准备 %}**这篇博客准备好docker离线安装包。
 
 # 目的
 能够在无网络的环境下安装好docker-ce.18版本
