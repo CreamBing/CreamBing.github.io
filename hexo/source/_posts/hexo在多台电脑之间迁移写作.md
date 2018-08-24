@@ -6,8 +6,8 @@ tags:
 - hexo
 - 迁移
 categories:
-- hexo
 - 博客
+- hexo
 comments: true
 ---
 # 前言
