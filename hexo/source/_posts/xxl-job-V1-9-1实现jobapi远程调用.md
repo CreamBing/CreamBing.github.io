@@ -11,8 +11,8 @@ categories:
 comments: true
 ---
 # 前言
-**{% link xxl-job http://www.xuxueli.com/xxl-job %}**是一个非常好用的分布式java任务调度框架,目前实际应用中框架建议我们在其管理页面手动新增调度任
-务,但是由于一些情况,我们更加希望能够通过代码动态添加job,官方在job-core中提供了相关api,位置:<font color="#eb4d4b">com.xxl.job.core.biz.AdminBiz.java</font>但是提供的功能有限,无法满足我们的需求,但是根据后面官方的说法，可以通过修改xxl-jobadmin的源码,实现其部分接口可以绕过登陆来远程调用
+**{% link xxl-job http://www.xuxueli.com/xxl-job %}**是一个非常好用的分布式java任务调度框架,目前实际应用中框架建议我们在其管理页面手动新增调度
+任务,但是由于一些情况,我们更加希望能够通过代码动态添加job,官方在job-core中提供了相关api,位置:<font color="#eb4d4b">com.xxl.job.core.biz.AdminBiz.java</font>但是提供的功能有限,无法满足我们的需求,但是根据后面官方的说法，可以通过修改xxl-jobadmin的源码,实现其部分接口可以绕过登陆来远程调用
 
 # 目的
 通过修改xxl-jobadmin的源码,实现其部分接口可以绕过登陆来远程调用:
