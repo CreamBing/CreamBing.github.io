@@ -20,3 +20,74 @@ HTTP是现代应用常用的一种交换数据和媒体的网络方式，高效�
 # 目的
 介绍一些okhttp3的基本用法
 <!-- more -->
+
+# 正文
+## 获取OkHttpClient客户端
+{% codeblock %}
+//简单获取
+OkHttpClient client = new OkHttpClient();
+
+//设置超时时间
+private static final OkHttpClient client = new OkHttpClient.Builder()
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.SECONDS)
+            .build();
+{% endcodeblock %}
+
+## get请求
+### 普通get请求
+{% codeblock %}
+String url = "https://www.baidu.com/";
+OkHttpClient okHttpClient = new OkHttpClient();
+Request request = new Request.Builder()
+    .url(url)
+    .build();
+Call call = okHttpClient.newCall(request);
+try {
+    Response response = call.execute();
+    if (response.isSuccessful()) {
+        System.out.println(response.body().string());
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+{% endcodeblock %}
+
+### 设置header参数
+可以设置例如Cookie，User-Agent什么的
+{% codeblock %}
+Request request = new Request.Builder()
+    .url(url)
+    .header("键", "值")
+    .header("键", "值")
+    ...
+    .build();
+{% endcodeblock %}
+
+## post请求
+### 普通的表单提交
+{% codeblock %}
+String url = "https://www.baidu.com/";
+OkHttpClient okHttpClient = new OkHttpClient();
+
+RequestBody body = new FormBody.Builder()
+    .add("键", "值")
+    .add("键", "值")
+    .build();
+
+Request request = new Request.Builder()
+    .url(url)
+    .post(body)
+    .build();
+
+Call call = okHttpClient.newCall(request);
+try {
+    Response response = call.execute();
+    System.out.println(response.body().string());
+} catch (IOException e) {
+    e.printStackTrace();
+}
+{% endcodeblock %}
+
+# 参考资料
+{% link OkHttp3的基本用法 简书 许宏川 https://www.jianshu.com/p/1873287eed87 %}
