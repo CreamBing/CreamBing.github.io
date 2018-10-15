@@ -30,5 +30,26 @@ yum install wget
 提取码:***ixnx***
 
 ## mv并设置环境变量
+{% codeblock %}
+mv docker-compose-Linux-x86_64 docker-compose
+mkdir -p /apps/softs/docker_compose/
+cd /apps/softs/docker_compose/
+cp /dev/zkandkafka/docker-compose /apps/softs/docker_compose/
+chmod +x docker-compose
+修改环境变量
+vi /etc/profile
+DOCKER_COMPOSE_HOME=/apps/softs/docker_compose/
+PATH=$PATH:$DOCKER_COMPOSE_HOME
+export PATH
+source /etc/profile
+{% endcodeblock %}
 
+## 验证
+{% codeblock %}
+docker-compose -v
+{% endcodeblock %}
+{% img /images/docker/docker-compose-success.png %}
+
+## 其他
+docker-compose版本
 {% img /images/docker/docker-compose.png %}

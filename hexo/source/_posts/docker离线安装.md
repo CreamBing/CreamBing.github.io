@@ -83,6 +83,7 @@ yum install docker-ce
 有可能会安装失败，第一次安装失败,主要是在进行**{% post_link docker离线安装包准备 %}**的时候没有进行第二步**修改yum源镜像地址**,添加之后重新制作就好了
 截图
 {% img /images/docker/docker_install_fail.png %}
+这里主要是audit-libs-2.8.1-3.e17_5.1.x86_64(local)与需要安装的audit-2.8.1-3.e17.x86_64冲突，卸载就好了
 
 
 

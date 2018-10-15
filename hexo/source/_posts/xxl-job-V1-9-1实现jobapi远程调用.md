@@ -41,3 +41,6 @@ comments: true
 {% img /images/xxl-job/xxl-jobadmin-fail.jpg %}
 修改源码后，调用后通过json方式返回
 {% img /images/xxl-job/xxl-jobadmin-success.jpg %}
+
+## 参考资料
+1.{% link 官方针对远程调用的方法解决 https://github.com/xuxueli/xxl-job/commit/88b0812b61474df39ac4201ccfc7da3f1de816d7#diff-b4ac3a5184bc20c02339f0324c7dbe53 %}
