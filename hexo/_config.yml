@@ -87,3 +87,7 @@ search:
   field: post
   format: html
   limit: 10000
+
+## docs: https://github.com/MikeCoder/hexo-blog-encrypt
+encrypt:
+    enable: true
