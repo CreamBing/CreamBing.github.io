@@ -26,6 +26,7 @@ comments: true
 <font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font>
 {% img /images/xxl-job/xxl-jobadmin-success.jpg %}
 {% link xxl-job-v1.9.1 下载地址 https://github.com/xuxueli/xxl-job/releases %}
+**{% post_link docker离线安装包准备 %}**
 {% codeblock %}
 代码
 {% endcodeblock %}
