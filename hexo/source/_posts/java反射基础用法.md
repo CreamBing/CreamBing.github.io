@@ -129,3 +129,55 @@ obj.class确实不会初始化类
 Class.forName会调用静态块
 初始化子类构造先初始化父类构造
 ```
+
+## 反射获取私有属性和方法
+{% codeblock %}
+public class ReflectDemo {
+
+    public static void main(String[] args) throws Exception {
+        OutterClass out = new OutterClass();
+        System.out.println("***************");
+        getAllFields(out);
+        System.out.println("***************");
+        getAllMethods(out);
+    }
+
+    /**
+     * 获取一个对象的所有属性
+     * @param obj
+     */
+    public static void getAllFields (Object obj) throws Exception{
+        //获取该类包括父类的属性，未注释的表示只有该类的
+        //Field[] fields = obj.getClass().getFields();
+        Field[] fields = obj.getClass().getDeclaredFields();
+        for(Field f : fields){
+            f.setAccessible(true);
+            System.out.println("属性-值:"+f.getName()+"-"+f.get(obj));
+        }
+    }
+
+    public static void getAllMethods (Object obj) throws Exception {
+        //获取该类包括父类的属性，未注释的表示只有该类的
+        //Method[] methods = obj.getClass().getMethods();
+        Method[] methods = obj.getClass().getDeclaredMethods();
+        for(Method m : methods){
+            m.setAccessible(true);
+            System.out.println(m+"\n参数个数:"+m.getParameterCount());
+            switch (m.getParameterCount()){
+                case 0:
+                    m.invoke(obj);
+                    break;
+                case 1:
+                    m.invoke(obj,"hello");
+                    break;
+                default:
+                    System.out.println("参数个数大于1");
+            }
+
+
+        }
+    }
+}
+{% endcodeblock %}
+执行结果:
+{% img /images/java/refect/reflect2.png %}
