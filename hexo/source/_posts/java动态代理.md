@@ -12,7 +12,7 @@ comments: true
 # 前言
 **{% post_link java反射基础用法 %}**这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法
 # 目的
-简单介绍一下动态代理的用法，<font color="#eb4d4b">JDK提供的代理只能针对接口做代理,我们有更强大的代理cglib</font>
+简单介绍一下动态代理的用法，<font color="#eb4d4b">JDK提供的代理只能针对接口做代理,我们有更强大的代理**{% post_link CGLib代理 %}**</font>
 
 <!-- more -->
 
