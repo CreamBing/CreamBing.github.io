@@ -74,5 +74,10 @@ wifi最好不要选择自动连接，如果是有线的话在更新完之后要�
 网上说这是由于你的账号没有登陆的原因，但其实我是登录的的，不过我还是在docker程序上右键restart了一下，然后就好了
 {% img /images/docker/windows/docker_run_helloworld_success.jpg %}
 
+## 修改设置
+将docker容器可以用到的盘符以及镜像下载位置设置一下
+{% img /images/docker/windows/docker_settings1.png %}
+{% img /images/docker/windows/docker_settings2.png %}
+
 
 
