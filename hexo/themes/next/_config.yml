@@ -361,6 +361,17 @@ han: false
 # Duoshuo ShortName
 #duoshuo_shortname:
 
+# doc https://github.com/gitalk/gitalk#install
+#gittalk
+gitalk:
+  enable: true    #用来做启用判断可以不用
+  clientID: b9b500d208c090d375e0    #上面生成的往这里怼
+  clientSecret: fbef34658313c8f6ea9094f230bf02bd79bbda1b   #同上
+  repo: forGitalk    #仓库名称
+  owner: CreamBing    #github用户名
+  admin: CreamBing
+  distractionFreeMode: true
+
 # Disqus
 disqus:
   enable: true
