@@ -214,6 +214,9 @@ public class AppConf {
 
 ```
 
+# 参考资料
+{% link springcloud-consul中文文档 https://springcloud.cc/spring-cloud-consul.html %}
+
 
 
 
