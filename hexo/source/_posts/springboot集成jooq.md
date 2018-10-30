@@ -134,6 +134,8 @@ idea初始化工程方法可以参见**{% post_link springcloud编写用户微�
 <font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font>
 1.这是以h2作为梨子，如果要用mysql的话差不过需要修改相关位置
 2.maven package打包忽略插件
+<font color="#eb4d4b">放在pom驱动配置的configuration标签内
+20181030更新:注意这个标签添加之后，无论编译打包甚至直接运行这个插件都不再生成相关东西，如果你现在需要重新运行一遍，请先提交或者保存你做过的修改，然后注释掉这个，运行完之后再加上，然后再将你做的修改重新添加回来</font>
 ```
 <!-- install 跳过 -->
 <skip>true</skip>
@@ -146,6 +148,26 @@ idea初始化工程方法可以参见**{% post_link springcloud编写用户微�
     <daos>true</daos>
     <springAnnotations>true</springAnnotations>
 </generate>
+```
+4.<font color="#eb4d4b">20181030更新:当h2的数据库类型为内存时，结果jooq-codegen-maven无法生成</font>
+```
+<!-- JDBC connection parameters -->
+<jdbc>
+    <driver>org.h2.Driver</driver>
+    <url>jdbc:h2:mem:test</url>
+    <user>sa</user>
+    <password>123456</password>
+</jdbc>
+```
+需要改成文件类型
+```
+<!-- JDBC connection parameters -->
+<jdbc>
+    <driver>org.h2.Driver</driver>
+    <url>jdbc:h2:~/testmovie</url>
+    <user>sa</user>
+    <password>123456</password>
+</jdbc>
 ```
 jooq-codegen-maven以上配置生成的目录结构如下
 {% img /images/java/springboot2/jooq/dir_jooq_mavn.png %}
