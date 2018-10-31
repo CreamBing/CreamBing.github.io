@@ -108,6 +108,58 @@ public interface MovieFeignClient {
     }
 }
 ```
+## 集成ribbon
+添加一个配置类java
+```java
+@Component
+public class RibbonConf {
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+}
+```
+添加ribbon调用服务类
+```java
+@Service
+public class MovieRibbonService {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @HystrixCommand(fallbackMethod = "fallback")
+    public Observable<Movie> findOneById(Long id) {
+        return Observable.create(observer -> {
+            Movie movie = restTemplate.getForObject("http://consul-movie/movie/findOneById", Movie.class, id);
+            observer.onNext(movie);
+            observer.onComplete();
+        });
+    }
+
+    public Observable<Movie> fallback(Long id) {
+        return Observable.create(observer -> {
+            Movie movie = new Movie();
+            movie.setId(-1L);
+            observer.onNext(movie);
+            observer.onComplete();
+        });
+    }
+
+    @HystrixCommand(fallbackMethod = "fallback1")
+    public Movie findOneById1(Long id) {
+        return restTemplate.getForObject("http://consul-movie/movie/findOneById", Movie.class, id);
+    }
+
+    public Movie fallback1(Long id,Throwable throwable) {
+        System.out.println("consul-movie /movie/findOneById 报错:"+throwable);
+        Movie movie = new Movie();
+        movie.setId(-1L);
+        return movie;
+    }
+}
+```
 
 ## 新建聚合controller和服务(RXjava)
 针对feign实现的service,之前在上面截图中可以发现我在上面加了HystrixCommand没有用，所以去掉了，不知道是不是因为里面是feign实现的，所以下面会有ribbon实现
@@ -270,7 +322,9 @@ public class UserAndMovieController {
 }
 ```
 访问
-http://localhost:1051/um/getUserAndMovie?id=1
-http://localhost:1051/um/getUserAndMovieUseRx?id=1
+feign http://localhost:1051/um/getUserAndMovieUseRx?id=1 hystrix有效
+rxjava+ribbon http://localhost:1051/um/getUserAndMovieUseRibbon?id=1 hystrix无效
+ribbon http://localhost:1051/um/getAllUserRibbon hystrix有效
+ribbon http://localhost:1051/um/getUserAndMovieUseRibbon1?id=1 hystrix有效
 
 
