@@ -24,6 +24,13 @@ Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的�
 ## 初始化工程
 方法跟**{% post_link springcloud集成consul %}**中前期准备工程一般，勾选下列依赖
 {% img /images/java/springcloud/consul/feign/idea_feign.jpg %}
+如果不是上述方法初始化，添加依赖
+```
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-openfeign</artifactId>
+</dependency>
+```
 在resources文件夹下新增bootstrap.yml文件，写入以下内容
 ```
 #tomcat启动启动端口
@@ -88,6 +95,12 @@ public interface UserFeignClient {
     @RequestMapping(value = "/user/getAll",method = RequestMethod.GET)
     List<User> getAllUser();
 }
+```
+<font color="#eb4d4b">20181030更新:get多参数写法</font>
+
+```
+直接写Long id或者直接是User user这种对象，feign依然会用post方式调用，所以会报错接口不支持
+需要用@RequestParam("id") Long id，或者@RequestParam Map<String,Object> map
 ```
 最终的工程结构
 {% img /images/java/springcloud/consul/feign/dir_feign.jpg %}
