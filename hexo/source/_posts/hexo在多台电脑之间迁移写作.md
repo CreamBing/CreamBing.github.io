@@ -52,6 +52,16 @@ hexo s -d
 ```
 hexo g -d 
 ```
+这里hexo g -d 将新的博客发布到master分支时，出现了Error: Host key verification failed.错误，因为在上一台电脑上是可以发布的，所以这里需要配置一下ssh认证
+```
+设置git全局邮箱和用户名git config --global user.name "yourgithubname"
+git config --global user.email "yourgithubemail"
+设置ssh keyssh-keygen -t rsa -C "youremail"
+#生成后填到github和coding上（有coding平台的话）
+#验证是否成功
+ssh -T git@github.com
+ssh -T git@git.coding.net #(有coding平台的话)
+```
 <font color="#eb4d4b">记得dev分支也要提交到对应的远程分支上,git push</font>
 
 
