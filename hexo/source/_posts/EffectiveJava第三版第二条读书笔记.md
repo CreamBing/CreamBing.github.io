@@ -3,12 +3,19 @@ title: EffectiveJava第三版第二条读书笔记
 comments: true
 date: 2019-01-14 13:50:49
 tags:
+- 书籍
+- java
+- EffectiveJava第三版
 categories:
+- 书籍
+- java
+- EffectiveJava第三版
 ---
 # 前言
 自己java编程已有两年，自己也写过一些轮子，也在工作中针对自己以前写的代码重构过，但是距离那些优秀的类库总有一些差距，最近在看 Effective Java 第三版，书中总结甚为精辟，遂在阅读过程中逐条写下笔记，以指导自己更加有效的使用 java 编程语言及基本类库,涵盖部分jdk 7,8,9 的新特性
 # 目的
-> 遇到多个构造器参数时要考虑使用构建器
+> Consider a builder when faced with many constructor parameters
+  遇到多个构造器参数时要考虑使用构建器
 <!-- more -->
 # 正文
 *例:用一个类表示包装食品外面显示的营养成分标签，其中有几个域是必须的*

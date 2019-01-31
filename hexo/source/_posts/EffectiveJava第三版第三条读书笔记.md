@@ -14,7 +14,8 @@ categories:
 # 前言
 自己java编程已有两年，自己也写过一些轮子，也在工作中针对自己以前写的代码重构过，但是距离那些优秀的类库总有一些差距，最近在看 Effective Java 第三版，书中总结甚为精辟，遂在阅读过程中逐条写下笔记，以指导自己更加有效的使用 java 编程语言及基本类库,涵盖部分jdk 7,8,9 的新特性
 # 目的
-> 用私有构造器或者枚举类型强化Singleton属性
+> Enforce the singleton property with a private constructor or an enum type
+  用私有构造器或者枚举类型强化Singleton属性
 <!-- more -->
 # 正文
 #### 利用枚举类型实现单例-天然的防止反射和反序列化调用
