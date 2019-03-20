@@ -11,6 +11,7 @@ categories:
 - 运维(OP)
 - docker
 - kafka
+---
 # 前言
 根据之前的博客中的描述，我们在任何平台上安装好了docker以及docker-compose,利用 **{% post_link docker-compose搭建zookeeper集群 %}** 安装好之后安装kafka集群
 # 目的
@@ -136,11 +137,12 @@ networks:
       name: zk_static-network
 ```
 #### 4.启动kafka集群
-```
-docker-compose -f kafaka.yml up -d
-``` 
+命令如下
+docker-compose -f kafaka.yml up -d 
+
 :camera:截图
 {% img /images/op/centos7/docker-compose-up-d-kafka.png %}
+
 #### 5.在kafka-manager页面查看是否正常
 当使用最新版 kafka-manager 的时候，会出现akka.event.Logging$LoggerInitializationException: TimeOut 异常
 https://hub.docker.com/r/sheepkiller/kafka-manager/tags
