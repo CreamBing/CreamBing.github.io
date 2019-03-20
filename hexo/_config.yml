@@ -91,3 +91,15 @@ search:
 ## docs: https://github.com/MikeCoder/hexo-blog-encrypt
 encrypt:
     enable: true
+
+## docs: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  quotes: “”‘’
+  pre_class: highlight
