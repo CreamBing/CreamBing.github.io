@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,springboot,aop,注解," />
+  <meta name="keywords" content="java,springboot,aop,注解,">
 
 
 
@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静态">
+<meta name="description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静">
 <meta name="keywords" content="java,springboot,aop,注解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springboot+Aop+自定义注解实现日志记录">
 <meta property="og:url" content="https://creambing.github.io/2018/10/21/springboot-Aop-自定义注解实现日志记录/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静态">
+<meta property="og:description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/refect/reflect6.png">
 <meta property="og:updated_time" content="2018-10-21T10:44:00.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot+Aop+自定义注解实现日志记录">
-<meta name="twitter:description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静态">
+<meta name="twitter:description" content="前言 AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，AOP代理主要分为静态代理和动态代理两大类，静">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/refect/reflect6.png">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/10/21/springboot-Aop-自定义注解实现日志记录/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/10/21/springboot-Aop-自定义注解实现日志记录/">
 
 
 
@@ -156,7 +156,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -186,7 +186,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -196,7 +196,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -206,7 +206,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -216,7 +216,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -229,7 +229,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -250,9 +250,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -293,7 +291,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -329,7 +327,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -387,17 +385,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/21/springboot-Aop-自定义注解实现日志记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/21/springboot-Aop-自定义注解实现日志记录/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -406,7 +393,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -427,14 +414,25 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p> AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，<font color="#eb4d4b">AOP代理主要分为静态代理和动态代理两大类，静态代理以AspectJ为代表；而动态代理则以Spring AOP为代表</font></p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>简单说明一下AspectJ，另外实现一个springboot+Aop+自定义注解实现日志记录的梨子</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>AOP（Aspect Orient Programming），也就是面向方面编程，作为面向对象编程的一种补充，专门用于处理系统中分布于各个模块（不同方法）中的交叉关注点的问题，在Java EE应用中，常常通过AOP来处理一些具有横切性质的系统级服务，如事务管理、安全检查、缓存、对象池管理等。AOP实现的关键就在于AOP框架自动创建的AOP代理，<font color="#eb4d4b">AOP代理主要分为静态代理和动态代理两大类，静态代理以AspectJ为代表；而动态代理则以Spring AOP为代表</font></p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>简单说明一下AspectJ，另外实现一个springboot+Aop+自定义注解实现日志记录的梨子</p>
 <a id="more"></a>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="AspectJ"><a href="#AspectJ" class="headerlink" title="AspectJ"></a>AspectJ</h2><p>AspectJ 是一个基于 Java 语言的 AOP 框架，提供了强大的 AOP 功能，其他很多 AOP 框架都借鉴或采纳其中的一些思想。<br>AspectJ 是 Java 语言的一个 AOP 实现，其主要包括两个部分：第一个部分定义了如何表达、定义 AOP 编程中的语法规范，通过这套语言规范，我们可以方便地用 AOP 来解决 Java 语言中存在的交叉关注点问题；另一个部分是工具部分，包括编译器、调试工具等。<br>AspectJ 是编译期增强的框架，需要遵从相关语法然后用他的工具编译织入</p>
-<h2 id="springboot-aop"><a href="#springboot-aop" class="headerlink" title="springboot aop"></a>springboot aop</h2><p>添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- AOP依赖模块 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 测试 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="aspectj"><a class="markdownIt-Anchor" href="#aspectj"></a> AspectJ</h2>
+<p>AspectJ 是一个基于 Java 语言的 AOP 框架，提供了强大的 AOP 功能，其他很多 AOP 框架都借鉴或采纳其中的一些思想。<br>
+AspectJ 是 Java 语言的一个 AOP 实现，其主要包括两个部分：第一个部分定义了如何表达、定义 AOP 编程中的语法规范，通过这套语言规范，我们可以方便地用 AOP 来解决 Java 语言中存在的交叉关注点问题；另一个部分是工具部分，包括编译器、调试工具等。<br>
+AspectJ 是编译期增强的框架，需要遵从相关语法然后用他的工具编译织入</p>
+<h2 id="springboot-aop"><a class="markdownIt-Anchor" href="#springboot-aop"></a> springboot aop</h2>
+<p>添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- AOP依赖模块 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 测试 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">自定义注解</span><br><span class="line">@Target(ElementType.METHOD)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">public @interface AnalysisActuator &#123;</span><br><span class="line"></span><br><span class="line">    String note() default &quot;&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">定义切面</span><br><span class="line">@Aspect</span><br><span class="line">@Component</span><br><span class="line">public class AnalysisActuatorAspect &#123;</span><br><span class="line"></span><br><span class="line">    final static Logger log = LoggerFactory.getLogger(AnalysisActuatorAspect.class);</span><br><span class="line"></span><br><span class="line">    ThreadLocal&lt;Long&gt; beginTime = new ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    @Pointcut(&quot;@annotation(analysisActuator)&quot;)</span><br><span class="line">    public void serviceStatistics(AnalysisActuator analysisActuator) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Before(&quot;serviceStatistics(analysisActuator)&quot;)</span><br><span class="line">    public void doBefore(JoinPoint joinPoint, AnalysisActuator analysisActuator) &#123;</span><br><span class="line">        // 记录请求到达时间</span><br><span class="line">        beginTime.set(System.currentTimeMillis());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @After(&quot;serviceStatistics(analysisActuator)&quot;)</span><br><span class="line">    public void doAfter(AnalysisActuator analysisActuator) &#123;</span><br><span class="line">        log.info(&quot;statistic time:&#123;&#125;, note:&#123;&#125;&quot;, System.currentTimeMillis() - beginTime.get(), analysisActuator.note());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">服务改写</span><br><span class="line">@Service</span><br><span class="line">public class PersonServiceForAopImpl implements PersonService &#123;</span><br><span class="line"></span><br><span class="line">    @AnalysisActuator(note = &quot;[PersonServiceForAopImpl]插入&quot;)</span><br><span class="line">    @Override</span><br><span class="line">    public int insert(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功插入一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @AnalysisActuator(note = &quot;[PersonServiceForAopImpl]更新&quot;)</span><br><span class="line">    @Override</span><br><span class="line">    public int update(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功更新一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">测试服务</span><br><span class="line">@RunWith(SpringRunner.class)</span><br><span class="line">@SpringBootTest</span><br><span class="line">public class TestPersonServiceForAopImpl &#123;</span><br><span class="line"></span><br><span class="line">    @Qualifier(&quot;personServiceForAopImpl&quot;)</span><br><span class="line">    @Autowired</span><br><span class="line">    PersonService personService;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testInsert()&#123;</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>执行结果<br><img src="/images/java/refect/reflect6.png"></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a href="https://www.ibm.com/developerworks/cn/java/j-lo-springaopcglib/" target="_blank" rel="noopener">Spring AOP实现原理与CGLIB应用</a><br>2.<a href="https://blog.csdn.net/u014717036/article/details/79039803" target="_blank" rel="noopener">使用Spring Boot的AOP处理自定义注解</a></p>
+<p>执行结果</p>
+<img src="/images/java/refect/reflect6.png">
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<p>1.<a href="https://www.ibm.com/developerworks/cn/java/j-lo-springaopcglib/" target="_blank" rel="noopener">Spring AOP实现原理与CGLIB应用</a><br>
+2.<a href="https://blog.csdn.net/u014717036/article/details/79039803" target="_blank" rel="noopener">使用Spring Boot的AOP处理自定义注解</a></p>
 
       
     </div>
@@ -445,7 +443,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -580,9 +578,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -595,7 +591,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -606,7 +602,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -617,7 +613,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -666,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AspectJ"><span class="nav-number">3.1.</span> <span class="nav-text">AspectJ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#springboot-aop"><span class="nav-number">3.2.</span> <span class="nav-text">springboot aop</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#aspectj"><span class="nav-number">3.1.</span> <span class="nav-text"> AspectJ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#springboot-aop"><span class="nav-number">3.2.</span> <span class="nav-text"> springboot aop</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text"> 参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -711,7 +707,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -849,26 +845,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/10/21/springboot-Aop-自定义注解实现日志记录/';
-          this.page.identifier = '2018/10/21/springboot-Aop-自定义注解实现日志记录/';
-          this.page.title = 'springboot+Aop+自定义注解实现日志记录';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -884,6 +860,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -895,7 +875,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

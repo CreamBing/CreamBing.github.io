@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-20181022.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-20181022.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="书籍,java,java编程思想第四版,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言 最近一段时间重读了java编程思想，把一些东西重新理解记录一遍  目的 整理知识点，方便以后回顾，这一章主要讲解了java的通过异常处理错误">
+<meta name="keywords" content="书籍,java,java编程思想第四版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java编程思想第四版第十二章读书笔记">
+<meta property="og:url" content="https://creambing.github.io/2019/01/20/java编程思想第四版第十二章读书笔记/index.html">
+<meta property="og:site_name" content="技术之路">
+<meta property="og:description" content="前言 最近一段时间重读了java编程思想，把一些东西重新理解记录一遍  目的 整理知识点，方便以后回顾，这一章主要讲解了java的通过异常处理错误">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-20T06:49:03.842Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java编程思想第四版第十二章读书笔记">
+<meta name="twitter:description" content="前言 最近一段时间重读了java编程思想，把一些东西重新理解记录一遍  目的 整理知识点，方便以后回顾，这一章主要讲解了java的通过异常处理错误">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://creambing.github.io/2019/01/20/java编程思想第四版第十二章读书笔记/">
+
+
+
+
+
+  <title>java编程思想第四版第十二章读书笔记 | 技术之路</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">技术之路</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">java后台技术栈</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://creambing.github.io/2019/01/20/java编程思想第四版第十二章读书笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cream Bing">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar20180821.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术之路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java编程思想第四版第十二章读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-20T13:55:47+08:00">
+                2019-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/书籍/" itemprop="url" rel="index">
+                    <span itemprop="name">书籍</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/书籍/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/书籍/java/java编程思想第四版/" itemprop="url" rel="index">
+                    <span itemprop="name">java编程思想第四版</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>最近一段时间重读了java编程思想，把一些东西重新理解记录一遍</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>整理知识点，方便以后回顾，这一章主要讲解了java的通过异常处理错误</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h4 id="1通过异常处理错误"><a class="markdownIt-Anchor" href="#1通过异常处理错误"></a> 1.通过异常处理错误</h4>
+<p>Java的基本理念是“结构不佳的代码不能运行”。<br>
+Java中异常处理的目的在于通过使用少于目前数量的代码来简化大型、可靠的程序的生成，并且通过这种方式可以使程序员增加自信</p>
+<h4 id="2概念"><a class="markdownIt-Anchor" href="#2概念"></a> 2.概念</h4>
+<p>因为异常机制将保证能够捕获这个错误，所以不用小心翼翼的各种去检查。而处理错误只需要在一个地方完成，那就是 异常处理程序。<br>
+只需要在异常处理程序中处理错误。</p>
+<h4 id="3基本异常"><a class="markdownIt-Anchor" href="#3基本异常"></a> 3.基本异常</h4>
+<p>异常情形是指阻止当前方法或作用域继续执行的问题。<br>
+异常处理程序将程序从错误状态中恢复，以使程序要么换一种方式运行，要么继续运行下去。<br>
+在没有其它办法的情况下，异常允许我们强制程序停止运行，并告诉我们出现了什么问题。理想状态下，还可以强制程序处理问题，并返回到稳定状态的。<br>
+异常参数：<br>
+用new在堆上创建异常对象，所有标准异常类都有两个构造器，一个默认的，一个带参的。<br>
+能够抛出任意类型的Throwable对象，它是异常类型的根类。</p>
+<h4 id="4捕获异常"><a class="markdownIt-Anchor" href="#4捕获异常"></a> 4.捕获异常</h4>
+<p>监控区域是一个可能产生异常的代码，并且后面跟着处理这些异常的代码。<br>
+如果在方法内部抛出了异常，那么这个方法就此结束。如果不希望这个方法结束，那么可以在方法内设置一个特殊的块来捕获异常，即try块。为什么叫try呢，因为在这个块里“尝试”各种可能产生异常的方法进行调用，所以是try。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">// Code that might generate exceptions</span><br><span class="line">&#125; catch(Type1 id1)|&#123;</span><br><span class="line">// Handle exceptions of Type1</span><br><span class="line">&#125; catch(Type2 id2) &#123;</span><br><span class="line">// Handle exceptions of Type2</span><br><span class="line">&#125; catch(Type3 id3) &#123;</span><br><span class="line">// Handle exceptions of Type3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>异常抛出后，异常处理机制将搜索参数与异常类型相匹配的第一个处理程序，进入catch语句处理，此时认为异常的到了处理。catch子句结束，则处理程序不再往下找匹配了。<br>
+终止与恢复：<br>
+异常处理理论上有两种基本模型，java支持终止模型。该模型假设错误非常关键，一旦异常被抛出，那么错误已经无可挽回，程序不能继续执行。<br>
+另一种模型是恢复模型，就是先修正错误，然后重新进入该方法。这个模型假定了修正完之后再进入执行一定会成功。<br>
+相比较终止模型还是比较占优的，因为恢复模型需要了解异常抛出的地点，麻烦。</p>
+<h4 id="5创建自定义异常"><a class="markdownIt-Anchor" href="#5创建自定义异常"></a> 5.创建自定义异常</h4>
+<p>可以异常类不写构造函数，使用默认无参构造函数，也可以写构造函数。酱紫可以实现在抛出的异常后面打印出异常所在函数等功能。比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123; </span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span> </span>&#123;&#125; </span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">(String msg)</span> </span>&#123; <span class="keyword">super</span>(msg); &#125; </span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>在抛出异常时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void g() throws MyException &#123; </span><br><span class="line">          System.out.println(&quot;Throwing MyException from g()&quot;); </span><br><span class="line">          throw new MyException(&quot;Originated in g()&quot;); </span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>那么，在打印的时候，就可以打印出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyException: Originated in g()</span><br></pre></td></tr></table></figure>
+<p>在异常处理程序中，调用Throwable类的printStackTrace()方法，那么“从异常方法调用处直到异常抛出处”的方法调用序列将被打印出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyException </span><br><span class="line">     at FullConstructors.f(FullConstructors.java:11) </span><br><span class="line">     at FullConstructors.main(FullConstructors.java:19)</span><br></pre></td></tr></table></figure>
+<p>printStackTrace()方法可以带参数，比如printStackTrace(System.out)，这样打印出来的信息将被发送到System.out，如果该方法不带参，那么信息将被输出到标准错误流<br>
+异常与记录日志<br>
+使用java.util.logging工具将输出记录到日志中<br>
+当然，不能指望每个程序员把记录日志的程序的基础设施都构建在异常里，所以更常见的情形是需要捕获和记录他人编写的异常，因此需要在异常处理程序中生成日志消息<br>
+我们甚至可以进一步定义异常，比如加入额外的构造器和成员，然而一般来说并不会用上这些功能<br>
+<strong>TODO:</strong> 现在都用的slf4j集成log4j来记录日志的，这里分享一下好用的日志框架集成方法</p>
+<h4 id="6异常说明"><a class="markdownIt-Anchor" href="#6异常说明"></a> 6.异常说明</h4>
+<p>异常说明使用了关键字 throws，后面接一个潜在的异常类型列表。<br>
+void f() throws TooBig, TooSmall, DivZero { //…<br>
+这种在编译时被强制检查的异常称为被检查的异常。<br>
+也可以声明方法将抛出异常，但是实际上却不抛出。这样做可以先为异常占个位置，以后可以抛出这类异常而不用修改已有方法，这种“作弊”方法通常用在你定义抽象基类和接口时，这样派生类或者接口实现就能抛出这些预先声明的异常。</p>
+<h4 id="7捕获所有异常"><a class="markdownIt-Anchor" href="#7捕获所有异常"></a> 7.捕获所有异常</h4>
+<p>捕获异常类型的基类Exception（还有其它基类），这可以保证异常一定会被捕获，最好把它放到异常处理程序列表的末尾</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">catch(Exception e) &#123;</span><br><span class="line">System.out.println(&quot;Caught an exception&quot;);</span><br><span class="line">&#125;</span><br><span class="line">Exception可以调用其从基类继承的方法：</span><br><span class="line">String getMessage( )</span><br><span class="line">String getLocalizedMessage( )</span><br></pre></td></tr></table></figure>
+<p>获取详细信息（抛出异常对象所带的参数），或者用本地语言表示的详细信息。<br>
+栈轨迹：<br>
+printStackTrace()方法所提供的信息可以通过getStackTrace()方法来直接访问，该方法返回一个由栈轨迹元素所构成的数组，每个元素表示栈中的一帧，元素0也是栈顶元素，是最后调用的方法（Throwable被创建和抛出之处），最后一个元素是栈底，是调用序列的第一个方法调用。</p>
+<p>重新抛出异常<br>
+挡在异常处理模块里继续抛出异常，那么printStackTrace()方法显示的将是原来异常抛出点的调用栈信息，而非重新抛出点的的信息。<br>
+此时可以使用fillinStackTrace()方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">catch(Exception e) &#123;</span><br><span class="line">System.out.println(&quot;An exception was thrown&quot;);</span><br><span class="line">throw (Exception)e.fillInStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用fillInStackTrace()的这一行就成为异常的新发生地了。<br>
+在异常捕获之后抛出另一种异常，其效果类似于fillInStackTrace()</p>
+<p>异常链<br>
+在捕获一个异常后抛出另一个异常，并希望把原始异常的信息保存下来，这被称为异常链。<br>
+Throwable的子类可以在构造器中接受一个case对象作为参数。这个case参数表示原始异常，这样通过把原始异常传递给新的异常。<br>
+Throwable子类，只有三种基本异常提供了带case参数的构造器，它们是Error(用于Java虚拟机报告系统错误)、Exception以及RuntimeException。</p>
+<h4 id="8java标准异常"><a class="markdownIt-Anchor" href="#8java标准异常"></a> 8.Java标准异常</h4>
+<p>Throwable对象可分为两种类型（指从Throwable继承而得到的类型）：Error用来表示编译时和系统错误，Exception是可以被抛出的基本类型，包括Java类库，用户方法以及运行时故障都可以抛出此异常。<br>
+Error一般不用自己关心，来讲Exception:<br>
+特例RuntimeException<br>
+比如nullPointerException，空指针异常。<br>
+运行时产生的异常，不需要在异常说明中声明方法将抛出RuntimeException类型的异常。它们被称为“不受检查的异常”。这种异常属于错误，会被自动捕获，而不用程序员自己写代码捕获。<br>
+如果RuntimeException没有被捕获而直达main()，那么在程序退出前将调用异常的printStackTrace()方法。</p>
+<h4 id="9使用finally进行清理"><a class="markdownIt-Anchor" href="#9使用finally进行清理"></a> 9.使用finally进行清理</h4>
+<p>在异常处理程序后面加上finamlly子句，可保证无论try块里的异常是否抛出，都能执行。（通常适用于内存回收之外的情况）<br>
+finally执行未必要放在最后，正常的顺序执行到它就是它了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> net.mindview.util.Print.*;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FourException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlwaysFinally</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">print(<span class="string">"Entering first try block"</span>);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">print(<span class="string">"Entering second try block"</span>);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> FourException();</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">print(<span class="string">"finally in 2nd try block"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="keyword">catch</span>(FourException e) &#123;</span><br><span class="line">System.out.println(</span><br><span class="line"><span class="string">"Caught FourException in 1st try block"</span>);</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">System.out.println(<span class="string">"finally in 1st try block"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125; <span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">Entering first try block</span></span><br><span class="line"><span class="comment">Entering second try block</span></span><br><span class="line"><span class="comment">finally in 2nd try block</span></span><br><span class="line"><span class="comment">Caught FourException in 1st try block</span></span><br><span class="line"><span class="comment">finally in 1st try block</span></span><br></pre></td></tr></table></figure>
+<p>当涉及break和continue时，finally子句也会得到执行。<br>
+如果把finally子句和带标签的break以及continue配合使用，在java里没必要使用goto语句了。<br>
+有return语句时，finally依旧会执行。<br>
+异常丢失：<br>
+在一个异常还没得到处理的情况下，应该尽量避免抛出另一个异常。<br>
+1、使用finally可能导致一个异常还没处理，在接下来的finally字句中又抛出了一个异常，那么前一个异常就会丢失，外面的catch块捕捉到的就是finally抛出的异常而未察觉到最开始抛出的异常。<br>
+2、一种更简单的丢失异常的方式是在finally语句中直接return，这就更别说到catch块匹配异常了。<br>
+应该避免以上两种编程错误。</p>
+<h4 id="10异常的限制"><a class="markdownIt-Anchor" href="#10异常的限制"></a> 10.异常的限制</h4>
+<p>当覆盖 方法时，只能抛出在基类方法的异常说明里列出的那些异常或者不抛出，但是不能新增异常说明。这个限制意味着，当基类代码运用到派生类时，依旧有用<br>
+当处理派生类对象时，编译器只会强制要求捕获派生类该方法产生的异常。如果向上转型为基类，编译器会要求捕获基类方法产生的异常。很智能的。<br>
+异常说明本身并不属于方法类型的范畴中，因此不参与重载的判断。<br>
+基于特定方法的“异常说明的接口”不是变大了而是变小了，小于等于基类异常说明表——这恰好和类接口在继承时的情形相反</p>
+<h4 id="11构造器"><a class="markdownIt-Anchor" href="#11构造器"></a> 11.构造器</h4>
+<blockquote>
+<p>如果异常发生了，所有东西能正常清理吗？</p>
+</blockquote>
+<p>例如io操作的时候，文件没有正常的构造，在finally中却要file.close，所以一般在close中又加一层try catch<br>
+基本规则是:在创建需要清理的对象之后，立即进入一个try-finally块，不过新版jdk有新的语法了</p>
+<h4 id="12异常的匹配"><a class="markdownIt-Anchor" href="#12异常的匹配"></a> 12.异常的匹配</h4>
+<p>异常匹配并不要求与抛出的异常完全匹配，也可以匹配该异常的基类。<br>
+如果故意把基类异常放在前面，导致子类异常的catch子句永远得不到执行，编译器会报错。</p>
+<h4 id="13其它可选方式"><a class="markdownIt-Anchor" href="#13其它可选方式"></a> 13.其它可选方式</h4>
+<p>1、将异常传递给控制台，使用FileInputStream进行打开关闭操作，记录在一个文件中。<br>
+2、用RuntimeException来包装“被检查的异常”。</p>
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<p><a href="https://blog.csdn.net/severusyue/article/details/51780879" target="_blank" rel="noopener">https://blog.csdn.net/severusyue/article/details/51780879</a> Java编程思想第四版读书笔记——第十二章 通过异常处理错误 severusyue</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
+    <div>subscribe to my blog by scanning my public wechat account</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Cream Bing
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://creambing.github.io/2019/01/20/java编程思想第四版第十二章读书笔记/" title="java编程思想第四版第十二章读书笔记">https://creambing.github.io/2019/01/20/java编程思想第四版第十二章读书笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/书籍/" rel="tag"># 书籍</a>
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/java编程思想第四版/" rel="tag"># java编程思想第四版</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/18/java编程思想第四版第十一章读书笔记/" rel="next" title="java编程思想第四版第十一章读书笔记">
+                <i class="fa fa-chevron-left"></i> java编程思想第四版第十一章读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/20/java编程思想第四版第十三章读书笔记/" rel="prev" title="java编程思想第四版第十三章读书笔记">
+                java编程思想第四版第十三章读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+      <div class="comments" id="comments">
+        <div id="gitalk-container"></div>
+      </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
+            
+              <p class="site-author-name" itemprop="name">Cream Bing</p>
+              <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/CreamBing" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/CreamBing" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1通过异常处理错误"><span class="nav-number">3.0.0.1.</span> <span class="nav-text"> 1.通过异常处理错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2概念"><span class="nav-number">3.0.0.2.</span> <span class="nav-text"> 2.概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3基本异常"><span class="nav-number">3.0.0.3.</span> <span class="nav-text"> 3.基本异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4捕获异常"><span class="nav-number">3.0.0.4.</span> <span class="nav-text"> 4.捕获异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5创建自定义异常"><span class="nav-number">3.0.0.5.</span> <span class="nav-text"> 5.创建自定义异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6异常说明"><span class="nav-number">3.0.0.6.</span> <span class="nav-text"> 6.异常说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7捕获所有异常"><span class="nav-number">3.0.0.7.</span> <span class="nav-text"> 7.捕获所有异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8java标准异常"><span class="nav-number">3.0.0.8.</span> <span class="nav-text"> 8.Java标准异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9使用finally进行清理"><span class="nav-number">3.0.0.9.</span> <span class="nav-text"> 9.使用finally进行清理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10异常的限制"><span class="nav-number">3.0.0.10.</span> <span class="nav-text"> 10.异常的限制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11构造器"><span class="nav-number">3.0.0.11.</span> <span class="nav-text"> 11.构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12异常的匹配"><span class="nav-number">3.0.0.12.</span> <span class="nav-text"> 12.异常的匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13其它可选方式"><span class="nav-number">3.0.0.13.</span> <span class="nav-text"> 13.其它可选方式</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text"> 参考资料</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cream Bing</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID:  'b9b500d208c090d375e0',
+          clientSecret: 'fbef34658313c8f6ea9094f230bf02bd79bbda1b',
+          id: md5(window.location.pathname),
+          repo: 'forGitalk',
+          owner: 'CreamBing',
+          admin: 'CreamBing',
+          distractionFreeMode: 'true',
+        })
+        gitalk.render('gitalk-container')
+    </script>
+  
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="CGLib,代理," />
+  <meta name="keywords" content="CGLib,代理,">
 
 
 
@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="前言java动态代理这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理 目的简单介绍一下cglib的代理应用">
+<meta name="description" content="前言 **java动态代理**这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理  目的 简单介绍一下cglib的代理应用">
 <meta name="keywords" content="CGLib,代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CGLib代理">
 <meta property="og:url" content="https://creambing.github.io/2018/10/21/CGLib代理/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言java动态代理这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理 目的简单介绍一下cglib的代理应用">
+<meta property="og:description" content="前言 **java动态代理**这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理  目的 简单介绍一下cglib的代理应用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/refect/reflect5.jpg">
 <meta property="og:updated_time" content="2018-10-21T09:26:52.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CGLib代理">
-<meta name="twitter:description" content="前言java动态代理这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理 目的简单介绍一下cglib的代理应用">
+<meta name="twitter:description" content="前言 **java动态代理**这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理  目的 简单介绍一下cglib的代理应用">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/refect/reflect5.jpg">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/10/21/CGLib代理/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/10/21/CGLib代理/">
 
 
 
@@ -156,7 +156,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -186,7 +186,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -196,7 +196,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -206,7 +206,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -216,7 +216,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -229,7 +229,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -250,9 +250,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -293,7 +291,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -329,7 +327,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -376,17 +374,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/21/CGLib代理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/21/CGLib代理/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -395,7 +382,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -416,11 +403,21 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a href="/2018/10/21/java动态代理/" title="java动态代理">java动态代理</a></strong>这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.<font color="#eb4d4b">cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理</font></p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>简单介绍一下cglib的代理应用</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>**<a href="/2018/10/21/java动态代理/" title="java动态代理">java动态代理</a>**这篇博客介绍了java的动态代理，那么这里同样不得不介绍一下CGLib代理。JDK的动态代理机制只能代理实现了接口的类，而不能实现接口的类就不能实现JDK的动态代理.<font color="#eb4d4b">cglib是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对final修饰的类进行代理</font></p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>简单介绍一下cglib的代理应用</p>
 <a id="more"></a>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>同样用java动态代理的那个梨子</p>
-<h2 id="cglib代理"><a href="#cglib代理" class="headerlink" title="cglib代理"></a>cglib代理</h2><p>添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;cglib&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;cglib&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class CglibProxyInterceptor implements MethodInterceptor &#123;</span><br><span class="line"></span><br><span class="line">    //通过Enhancer 创建代理对象</span><br><span class="line">    private Enhancer enhancer = new Enhancer();</span><br><span class="line"></span><br><span class="line">    //通过Class对象获取代理对象</span><br><span class="line">    public &lt;T&gt; T getProxy(Class c)&#123;</span><br><span class="line">        //设置创建子类的类</span><br><span class="line">        enhancer.setSuperclass(c);</span><br><span class="line">        enhancer.setCallback(this);</span><br><span class="line">        return (T)enhancer.create();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;CglibProxyInterceptor 代理方法&quot;);</span><br><span class="line">         return methodProxy.invokeSuper(o,objects);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        CglibProxyInterceptor proxy = new CglibProxyInterceptor();</span><br><span class="line">        PersonService personServiceProxy = proxy.getProxy(PersonServiceImpl.class);</span><br><span class="line">        personServiceProxy.insert(new Object());</span><br><span class="line">        personServiceProxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>执行结果<br><img src="/images/java/refect/reflect5.jpg"><br>与java动态代理相比<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">相同点:</span><br><span class="line">    1.两个都新增了一个代理类，代理的类限制不大,扩展性很高</span><br><span class="line">    2.两种方式都不需要修改接口类以及实现类，只需要修改调用的地方即可，利用代理类调用</span><br><span class="line">不同点:</span><br><span class="line">    1.jdk动态代理需要对接口代理，cglib对非final修辞的类都可以代理</span><br><span class="line">    2.cglib是第三方包,需要添加依赖</span><br></pre></td></tr></table></figure></p>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<p>同样用java动态代理的那个梨子</p>
+<h2 id="cglib代理"><a class="markdownIt-Anchor" href="#cglib代理"></a> cglib代理</h2>
+<p>添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;cglib&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;cglib&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.2.4&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class CglibProxyInterceptor implements MethodInterceptor &#123;</span><br><span class="line"></span><br><span class="line">    //通过Enhancer 创建代理对象</span><br><span class="line">    private Enhancer enhancer = new Enhancer();</span><br><span class="line"></span><br><span class="line">    //通过Class对象获取代理对象</span><br><span class="line">    public &lt;T&gt; T getProxy(Class c)&#123;</span><br><span class="line">        //设置创建子类的类</span><br><span class="line">        enhancer.setSuperclass(c);</span><br><span class="line">        enhancer.setCallback(this);</span><br><span class="line">        return (T)enhancer.create();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;CglibProxyInterceptor 代理方法&quot;);</span><br><span class="line">         return methodProxy.invokeSuper(o,objects);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        CglibProxyInterceptor proxy = new CglibProxyInterceptor();</span><br><span class="line">        PersonService personServiceProxy = proxy.getProxy(PersonServiceImpl.class);</span><br><span class="line">        personServiceProxy.insert(new Object());</span><br><span class="line">        personServiceProxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果</p>
+<img src="/images/java/refect/reflect5.jpg">
+<p>与java动态代理相比</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">相同点:</span><br><span class="line">    1.两个都新增了一个代理类，代理的类限制不大,扩展性很高</span><br><span class="line">    2.两种方式都不需要修改接口类以及实现类，只需要修改调用的地方即可，利用代理类调用</span><br><span class="line">不同点:</span><br><span class="line">    1.jdk动态代理需要对接口代理，cglib对非final修辞的类都可以代理</span><br><span class="line">    2.cglib是第三方包,需要添加依赖</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -431,7 +428,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -562,9 +559,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -577,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -588,7 +583,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -599,7 +594,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -648,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cglib代理"><span class="nav-number">3.1.</span> <span class="nav-text">cglib代理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cglib代理"><span class="nav-number">3.1.</span> <span class="nav-text"> cglib代理</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -693,7 +688,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -831,26 +826,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/10/21/CGLib代理/';
-          this.page.identifier = '2018/10/21/CGLib代理/';
-          this.page.title = 'CGLib代理';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -866,6 +841,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -877,7 +856,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

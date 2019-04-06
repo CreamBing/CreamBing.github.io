@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,回溯," />
+  <meta name="keywords" content="算法,回溯,">
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="前言最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍 目的了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
+<meta name="description" content="前言 最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍  目的 了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
 <meta name="keywords" content="算法,回溯">
 <meta property="og:type" content="article">
 <meta property="og:title" content="回溯与递归">
 <meta property="og:url" content="https://creambing.github.io/2019/01/07/回溯与递归/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍 目的了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
+<meta property="og:description" content="前言 最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍  目的 了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/algorithm/java/backtracking/784_result.png">
 <meta property="og:image" content="https://creambing.github.io/images/algorithm/java/backtracking/LetterCasePermutation784.jpg">
 <meta property="og:updated_time" content="2019-01-08T12:44:59.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="回溯与递归">
-<meta name="twitter:description" content="前言最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍 目的了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
+<meta name="twitter:description" content="前言 最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍  目的 了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景">
 <meta name="twitter:image" content="https://creambing.github.io/images/algorithm/java/backtracking/784_result.png">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2019/01/07/回溯与递归/"/>
+  <link rel="canonical" href="https://creambing.github.io/2019/01/07/回溯与递归/">
 
 
 
@@ -157,7 +157,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -187,7 +187,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -197,7 +197,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -207,7 +207,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -217,7 +217,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -230,7 +230,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -251,9 +251,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -294,7 +292,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -330,7 +328,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -366,17 +364,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/07/回溯与递归/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/01/07/回溯与递归/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -385,7 +372,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -406,23 +393,42 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="回溯和递归的区别和联系"><a href="#回溯和递归的区别和联系" class="headerlink" title="回溯和递归的区别和联系"></a>回溯和递归的区别和联系</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">递归:递归是一种算法结构,函数调用本身,最直接的递归应用就是计算连续数的阶乘，计算规律：n!=(n-1)!*n，还有汉诺塔的实现</span><br><span class="line">回溯:在按某种搜索策略搜索的过程中，当到达某一状态时，继续向前搜索已经确定不会得到正确答案的情况下，可以返回上一搜索状态，沿着新的可能性继续搜索。其求解过程的实质是一个先序遍历一棵“状态树”的过程</span><br></pre></td></tr></table></figure>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>最近在leetcode刷题，对于平常不是很清楚的一些数据结构和算法重新回顾和巩固一遍</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>了解回溯和递归的区别，另外弄清楚回溯的特点和应用场景</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="回溯和递归的区别和联系"><a class="markdownIt-Anchor" href="#回溯和递归的区别和联系"></a> 回溯和递归的区别和联系</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">递归:递归是一种算法结构,函数调用本身,最直接的递归应用就是计算连续数的阶乘，计算规律：n!=(n-1)!*n，还有汉诺塔的实现</span><br><span class="line">回溯:在按某种搜索策略搜索的过程中，当到达某一状态时，继续向前搜索已经确定不会得到正确答案的情况下，可以返回上一搜索状态，沿着新的可能性继续搜索。其求解过程的实质是一个先序遍历一棵“状态树”的过程</span><br></pre></td></tr></table></figure>
 <p>两者之间的联系:回溯多用递归实现</p>
-<h2 id="回溯的特点"><a href="#回溯的特点" class="headerlink" title="回溯的特点"></a>回溯的特点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">搜索策略:符合递归算法，问题解决可以化为子问题，算法类似，规模减小;</span><br><span class="line">控制策略:当遇到失败的搜索状态，需要返回上一状态，沿另外的路径搜索;</span><br><span class="line">数据结构:一般用数组保存搜索过程中的状态、路径。</span><br></pre></td></tr></table></figure>
-<h2 id="选择回溯的前提"><a href="#选择回溯的前提" class="headerlink" title="选择回溯的前提"></a>选择回溯的前提</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择：对于每个特定的解，肯定是由一步步构建而来的，而每一步怎么构建，肯定都是有限个选择，要怎么选择，这个要知道；同时，在编程时候要定下，优先或合法的每一步选择的顺序，一般是通过多个if或者for循环来排列</span><br><span class="line">条件：对于每个特定的解的某一步，他必然要符合某个解要求符合的条件，如果不符合条件，就要回溯，其实回溯也就是递归调用的返回</span><br><span class="line">结束：当到达一个特定结束条件时候，就认为这个一步步构建的解是符合要求的解了。把解存下来或者打印出来。对于这一步来说，有时候也可以另外写一个issolution函数来进行判断。注意，当到达第三步后，有时候还需要构建一个数据结构，把符合要求的解存起来，便于当得到所有解后，把解空间输出来。这个数据结构必须是全局的，作为参数之一传递给递归函数</span><br></pre></td></tr></table></figure>
-<h2 id="回溯参数的设计"><a href="#回溯参数的设计" class="headerlink" title="回溯参数的设计"></a>回溯参数的设计</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">必须要有一个临时变量(可以就直接传递一个字面量或者常量进去)传递不完整的解，因为每一步选择后，暂时还没构成完整的解，这个时候这个选择的不完整解，也要想办法传递给递归函数。也就是，把每次递归的不同情况传递给递归调用的函数。</span><br><span class="line">可以有一个全局变量，用来存储完整的每个解，一般是个集合容器（也不一定要有这样一个变量，因为每次符合结束条件，不完整解就是完整解了，直接打印即可）。</span><br><span class="line">最重要的一点，一定要在参数设计中，可以得到结束条件。一个选择是可以传递一个量n，也许是数组的长度，也许是数量，等等。</span><br><span class="line">要保证递归函数返回后，状态可以恢复到递归前，以此达到真正回溯。</span><br></pre></td></tr></table></figure>
-<p><font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font><br><a href="https://leetcode.com/problems/letter-case-permutation/" target="_blank" rel="noopener">#784 LetterCasePermutation</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * creambing.com Inc.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2016-2017 All Rights Reserved.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.creambing.leetcode.backtracking;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Class Name:LetterCasePermutation784</span></span><br><span class="line"><span class="comment"> * Description:字母大小写全排列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Bing</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-01-07  20:52</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> v1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LetterCasePermutation784</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">letterCasePermutation</span><span class="params">(String S)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//全局的结果集合，作为回溯入参，保存完整结果</span></span><br><span class="line">        List&lt;String&gt; result = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//开始回溯，这里选用字符数组，方便遍历以及替换字符，同时还可以连接成完整结果</span></span><br><span class="line">        backtracking(S.toCharArray(), <span class="number">0</span>, result);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">char</span>[] s, <span class="keyword">int</span> pos, List&lt;String&gt; result)</span> </span>&#123;</span><br><span class="line">        result.add(<span class="keyword">new</span> String(s));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = pos; j &lt; s.length; j++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = s[j];</span><br><span class="line">            <span class="keyword">if</span> (Character.isAlphabetic(ch)) &#123;</span><br><span class="line">                s[j] = flip(ch);</span><br><span class="line">                backtracking(s, j+<span class="number">1</span>, result);</span><br><span class="line">                s[j]= ch;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">char</span> <span class="title">flip</span><span class="params">(<span class="keyword">char</span> ch)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Character.isUpperCase(ch)? Character.toLowerCase(ch):Character.toUpperCase(ch);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s =<span class="string">"ab14c"</span>;</span><br><span class="line">        <span class="keyword">new</span> LetterCasePermutation784().letterCasePermutation(s).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>思路根据上面的对于回溯的理解设计参数，我们从最简单的情景来设计程序，假设串是a,那么结果就是a,A,那么这个最简单的逻辑是什么了？先把当前串写入集合中，把第i个字母大小转换(数字不管)就是下面这段,要注意的是:<font color="#eb4d4b">要保证递归函数返回后，状态可以恢复到递归前，以此达到真正回溯,因此注释的那段很重要，要加上，否则回溯会有问题</font><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LetterCasePermutation784</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">char</span>[] s, <span class="keyword">int</span> pos, List&lt;String&gt; result)</span> </span>&#123;</span><br><span class="line">            result.add(<span class="keyword">new</span> String(s));</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = pos; j &lt; s.length; j++) &#123;</span><br><span class="line">                <span class="keyword">char</span> ch = s[j];</span><br><span class="line">                <span class="keyword">if</span> (Character.isAlphabetic(ch)) &#123;</span><br><span class="line">                    s[j] = flip(ch);</span><br><span class="line">                    backtracking(s, j+<span class="number">1</span>, result);</span><br><span class="line">                    <span class="comment">//s[j]= ch;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果截图<br><img src="/images/algorithm/java/backtracking/784_result.png"><br>运行流程分析<br><img src="/images/algorithm/java/backtracking/LetterCasePermutation784.jpg"><br>Runtime: 10 ms, faster than 45.47% of Java online submissions for Letter Case Permutation.</p>
+<h2 id="回溯的特点"><a class="markdownIt-Anchor" href="#回溯的特点"></a> 回溯的特点</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">搜索策略:符合递归算法，问题解决可以化为子问题，算法类似，规模减小;</span><br><span class="line">控制策略:当遇到失败的搜索状态，需要返回上一状态，沿另外的路径搜索;</span><br><span class="line">数据结构:一般用数组保存搜索过程中的状态、路径。</span><br></pre></td></tr></table></figure>
+<h2 id="选择回溯的前提"><a class="markdownIt-Anchor" href="#选择回溯的前提"></a> 选择回溯的前提</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">选择：对于每个特定的解，肯定是由一步步构建而来的，而每一步怎么构建，肯定都是有限个选择，要怎么选择，这个要知道；同时，在编程时候要定下，优先或合法的每一步选择的顺序，一般是通过多个if或者for循环来排列</span><br><span class="line">条件：对于每个特定的解的某一步，他必然要符合某个解要求符合的条件，如果不符合条件，就要回溯，其实回溯也就是递归调用的返回</span><br><span class="line">结束：当到达一个特定结束条件时候，就认为这个一步步构建的解是符合要求的解了。把解存下来或者打印出来。对于这一步来说，有时候也可以另外写一个issolution函数来进行判断。注意，当到达第三步后，有时候还需要构建一个数据结构，把符合要求的解存起来，便于当得到所有解后，把解空间输出来。这个数据结构必须是全局的，作为参数之一传递给递归函数</span><br></pre></td></tr></table></figure>
+<h2 id="回溯参数的设计"><a class="markdownIt-Anchor" href="#回溯参数的设计"></a> 回溯参数的设计</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">必须要有一个临时变量(可以就直接传递一个字面量或者常量进去)传递不完整的解，因为每一步选择后，暂时还没构成完整的解，这个时候这个选择的不完整解，也要想办法传递给递归函数。也就是，把每次递归的不同情况传递给递归调用的函数。</span><br><span class="line">可以有一个全局变量，用来存储完整的每个解，一般是个集合容器（也不一定要有这样一个变量，因为每次符合结束条件，不完整解就是完整解了，直接打印即可）。</span><br><span class="line">最重要的一点，一定要在参数设计中，可以得到结束条件。一个选择是可以传递一个量n，也许是数组的长度，也许是数量，等等。</span><br><span class="line">要保证递归函数返回后，状态可以恢复到递归前，以此达到真正回溯。</span><br></pre></td></tr></table></figure>
+<p><font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font></p>
+<a href="https://leetcode.com/problems/letter-case-permutation/" target="_blank" rel="noopener">#784 LetterCasePermutation</a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * creambing.com Inc.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2016-2017 All Rights Reserved.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.creambing.leetcode.backtracking;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Class Name:LetterCasePermutation784</span></span><br><span class="line"><span class="comment"> * Description:字母大小写全排列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Bing</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-01-07  20:52</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> v1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LetterCasePermutation784</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">letterCasePermutation</span><span class="params">(String S)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//全局的结果集合，作为回溯入参，保存完整结果</span></span><br><span class="line">        List&lt;String&gt; result = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//开始回溯，这里选用字符数组，方便遍历以及替换字符，同时还可以连接成完整结果</span></span><br><span class="line">        backtracking(S.toCharArray(), <span class="number">0</span>, result);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">char</span>[] s, <span class="keyword">int</span> pos, List&lt;String&gt; result)</span> </span>&#123;</span><br><span class="line">        result.add(<span class="keyword">new</span> String(s));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = pos; j &lt; s.length; j++) &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = s[j];</span><br><span class="line">            <span class="keyword">if</span> (Character.isAlphabetic(ch)) &#123;</span><br><span class="line">                s[j] = flip(ch);</span><br><span class="line">                backtracking(s, j+<span class="number">1</span>, result);</span><br><span class="line">                s[j]= ch;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">char</span> <span class="title">flip</span><span class="params">(<span class="keyword">char</span> ch)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Character.isUpperCase(ch)? Character.toLowerCase(ch):Character.toUpperCase(ch);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s =<span class="string">"ab14c"</span>;</span><br><span class="line">        <span class="keyword">new</span> LetterCasePermutation784().letterCasePermutation(s).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>思路根据上面的对于回溯的理解设计参数，我们从最简单的情景来设计程序，假设串是a,那么结果就是a,A,那么这个最简单的逻辑是什么了？先把当前串写入集合中，把第i个字母大小转换(数字不管)就是下面这段,要注意的是:<font color="#eb4d4b">要保证递归函数返回后，状态可以恢复到递归前，以此达到真正回溯,因此注释的那段很重要，要加上，否则回溯会有问题</font></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LetterCasePermutation784</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">char</span>[] s, <span class="keyword">int</span> pos, List&lt;String&gt; result)</span> </span>&#123;</span><br><span class="line">            result.add(<span class="keyword">new</span> String(s));</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = pos; j &lt; s.length; j++) &#123;</span><br><span class="line">                <span class="keyword">char</span> ch = s[j];</span><br><span class="line">                <span class="keyword">if</span> (Character.isAlphabetic(ch)) &#123;</span><br><span class="line">                    s[j] = flip(ch);</span><br><span class="line">                    backtracking(s, j+<span class="number">1</span>, result);</span><br><span class="line">                    <span class="comment">//s[j]= ch;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果截图</p>
+<img src="/images/algorithm/java/backtracking/784_result.png">
+<p>运行流程分析</p>
+<img src="/images/algorithm/java/backtracking/LetterCasePermutation784.jpg">
+<p>Runtime: 10 ms, faster than 45.47% of Java online submissions for Letter Case Permutation.</p>
 <a href="https://leetcode.com/problems/binary-watch/" target="_blank" rel="noopener">#401 BinaryWatch(二进制手表)</a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * creambing.com Inc.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2016-2017 All Rights Reserved.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.creambing.leetcode.backtracking;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Class Name:BinaryWatch401</span></span><br><span class="line"><span class="comment"> * Description:二进制手表</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Bing</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> v1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-01-08  19:00</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryWatch401</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">readBinaryWatch</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] hoursc = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] minutec = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">16</span>, <span class="number">32</span>&#125;;</span><br><span class="line">        List&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//我们想给了n个灯亮，那么我们正常就是先在hour中选，然后在minute中选，差不多想到下面这种逻辑</span></span><br><span class="line">        List&lt;Integer&gt; hourList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;Integer&gt; minuteList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</span><br><span class="line">            <span class="comment">//这里面关于最后一个回溯参数先前没有考虑，getHour中i=0开始遍历的，这里设置参数的原因是选过了就不能再选了</span></span><br><span class="line">            getHour(i, hourList, <span class="number">0</span>, hoursc, <span class="number">0</span>);</span><br><span class="line">            getMinu(num - i, minuteList, <span class="number">0</span>, minutec, <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> hour : hourList) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> minu : minuteList) &#123;</span><br><span class="line">                    result.add(hour+<span class="string">":"</span>+(minu&lt;<span class="number">10</span>?<span class="string">"0"</span>+minu:minu));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//这里一定要清空</span></span><br><span class="line">            hourList.clear();</span><br><span class="line">            minuteList.clear();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">getHour</span><span class="params">(<span class="keyword">int</span> n, List&lt;Integer&gt; hourList, <span class="keyword">int</span> hour, <span class="keyword">int</span>[] hoursc, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//这段可以不加，但是为了效率，加上</span></span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span> &amp;&amp; hour &lt; <span class="number">12</span>) &#123;</span><br><span class="line">            hourList.add(hour);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; hoursc.length; i++) &#123;</span><br><span class="line">            getHour(n - <span class="number">1</span>, hourList, hour + hoursc[i], hoursc, i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">getMinu</span><span class="params">(<span class="keyword">int</span> n, List&lt;Integer&gt; minuList, <span class="keyword">int</span> minu, <span class="keyword">int</span>[] minuc, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span> &amp;&amp; minu &lt; <span class="number">60</span>) &#123;</span><br><span class="line">            minuList.add(minu);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; minuc.length; i++) &#123;</span><br><span class="line">            getMinu(n - <span class="number">1</span>, minuList, minu + minuc[i], minuc, i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里拿到题目之后，感觉可以用回溯发，开始设计回溯参数</p>
-<p><font color="#eb4d4b">1.最开始的时候没有设计最后一个参数，for循环中i=0而不是index,这样导致选了之后在选，重复了，这里我们没有恢复状态，因为我们也没有改变状态，我们只是遍历取合适的值</font></p>
-<p><font color="#eb4d4b">2.另外一个小问题是组合的时候需要清空列表</font><br>Runtime: 3 ms, faster than 56.44% of Java online submissions for Binary Watch.</p>
+<p>这里拿到题目之后，感觉可以用回溯发，开始设计回溯参数<br>
+<font color="#eb4d4b">1.最开始的时候没有设计最后一个参数，for循环中i=0而不是index,这样导致选了之后在选，重复了，这里我们没有恢复状态，因为我们也没有改变状态，我们只是遍历取合适的值</font><br>
+<font color="#eb4d4b">2.另外一个小问题是组合的时候需要清空列表</font><br>
+Runtime: 3 ms, faster than 56.44% of Java online submissions for Binary Watch.</p>
 <p>其他需要回溯方法解决的leetcode题目:<a href="https://leetcode.com/tag/backtracking/" target="_blank" rel="noopener">https://leetcode.com/tag/backtracking/</a></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>1.<a href="https://www.jianshu.com/p/4c5ccac18fac" target="_blank" rel="noopener">https://www.jianshu.com/p/4c5ccac18fac</a> 递归2-回溯与递归 偏偏注定要落脚丶<br>2.<a href="https://blog.csdn.net/u014772862/article/details/51789015" target="_blank" rel="noopener">https://blog.csdn.net/u014772862/article/details/51789015</a> 回溯和递归区别 繁拾简忆<br>3.<a href="https://blog.csdn.net/sinat_27908213/article/details/80599460" target="_blank" rel="noopener">https://blog.csdn.net/sinat_27908213/article/details/80599460</a> 回溯算法超通俗易懂详尽分析和例题 littlelufisher</p>
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+<p>1.<a href="https://www.jianshu.com/p/4c5ccac18fac" target="_blank" rel="noopener">https://www.jianshu.com/p/4c5ccac18fac</a> 递归2-回溯与递归 偏偏注定要落脚丶<br>
+2.<a href="https://blog.csdn.net/u014772862/article/details/51789015" target="_blank" rel="noopener">https://blog.csdn.net/u014772862/article/details/51789015</a> 回溯和递归区别 繁拾简忆<br>
+3.<a href="https://blog.csdn.net/sinat_27908213/article/details/80599460" target="_blank" rel="noopener">https://blog.csdn.net/sinat_27908213/article/details/80599460</a> 回溯算法超通俗易懂详尽分析和例题 littlelufisher</p>
 
       
     </div>
@@ -433,7 +439,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -564,9 +570,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -579,7 +583,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -590,7 +594,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -601,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -650,7 +654,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯和递归的区别和联系"><span class="nav-number">3.1.</span> <span class="nav-text">回溯和递归的区别和联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯的特点"><span class="nav-number">3.2.</span> <span class="nav-text">回溯的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择回溯的前提"><span class="nav-number">3.3.</span> <span class="nav-text">选择回溯的前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯参数的设计"><span class="nav-number">3.4.</span> <span class="nav-text">回溯参数的设计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯和递归的区别和联系"><span class="nav-number">3.1.</span> <span class="nav-text"> 回溯和递归的区别和联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯的特点"><span class="nav-number">3.2.</span> <span class="nav-text"> 回溯的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择回溯的前提"><span class="nav-number">3.3.</span> <span class="nav-text"> 选择回溯的前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯参数的设计"><span class="nav-number">3.4.</span> <span class="nav-text"> 回溯参数的设计</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text"> 参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -695,7 +699,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -833,26 +837,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2019/01/07/回溯与递归/';
-          this.page.identifier = '2019/01/07/回溯与递归/';
-          this.page.title = '回溯与递归';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -868,6 +852,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -879,7 +867,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

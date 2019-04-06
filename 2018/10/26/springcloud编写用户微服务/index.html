@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,jooq,springcloud,h2," />
+  <meta name="keywords" content="java,springcloud,jooq,h2,">
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="前言1.springcloud Finchley.SR2版本2.springboot 版本2.0.6.RELEASE3.h24.jooq5.consul搭建一个用户微服务 目的利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
-<meta name="keywords" content="java,jooq,springcloud,h2">
+<meta name="description" content="前言 1.springcloud Finchley.SR2版本 2.springboot 版本2.0.6.RELEASE 3.h2 4.jooq 5.consul 搭建一个用户微服务  目的 利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
+<meta name="keywords" content="java,springcloud,jooq,h2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springcloud编写用户微服务">
 <meta property="og:url" content="https://creambing.github.io/2018/10/26/springcloud编写用户微服务/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言1.springcloud Finchley.SR2版本2.springboot 版本2.0.6.RELEASE3.h24.jooq5.consul搭建一个用户微服务 目的利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
+<meta property="og:description" content="前言 1.springcloud Finchley.SR2版本 2.springboot 版本2.0.6.RELEASE 3.h2 4.jooq 5.consul 搭建一个用户微服务  目的 利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/user/idea_build.png">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/user/consul_ui.png">
@@ -100,7 +100,7 @@
 <meta property="og:updated_time" content="2018-10-30T06:17:17.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springcloud编写用户微服务">
-<meta name="twitter:description" content="前言1.springcloud Finchley.SR2版本2.springboot 版本2.0.6.RELEASE3.h24.jooq5.consul搭建一个用户微服务 目的利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
+<meta name="twitter:description" content="前言 1.springcloud Finchley.SR2版本 2.springboot 版本2.0.6.RELEASE 3.h2 4.jooq 5.consul 搭建一个用户微服务  目的 利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/springcloud/consul/user/idea_build.png">
 
 
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/10/26/springcloud编写用户微服务/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/10/26/springcloud编写用户微服务/">
 
 
 
@@ -165,7 +165,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -195,7 +195,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -205,7 +205,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -215,7 +215,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -225,7 +225,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -238,7 +238,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -259,9 +259,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -302,7 +300,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -338,7 +336,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -396,17 +394,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/26/springcloud编写用户微服务/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/26/springcloud编写用户微服务/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -415,7 +402,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -436,21 +423,63 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>1.springcloud Finchley.SR2版本<br>2.springboot 版本2.0.6.RELEASE<br>3.h2<br>4.jooq<br>5.consul<br>搭建一个用户微服务</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="初始化工程"><a href="#初始化工程" class="headerlink" title="初始化工程"></a>初始化工程</h2><p>方法跟<strong><a href="/2018/10/23/springcloud集成consul/" title="springcloud集成consul">springcloud集成consul</a></strong>中前期准备工程一般，勾选下列依赖<br><img src="/images/java/springcloud/consul/user/idea_build.png"><br>在resources文件夹下新增bootstrap.yml文件，写入以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#tomcat启动启动端口</span><br><span class="line">server:</span><br><span class="line">  port: 1016</span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    #项目名称</span><br><span class="line">    name: consul-user</span><br><span class="line">  cloud:</span><br><span class="line">    consul:</span><br><span class="line">      #consul server的host或者ip</span><br><span class="line">      host: localhost</span><br><span class="line">      #consul server的端口</span><br><span class="line">      port: 18500</span><br><span class="line">      config:</span><br><span class="line">        #开启consul配置中心</span><br><span class="line">        enabled: true</span><br><span class="line">        #consul表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES</span><br><span class="line">        format: YAML</span><br><span class="line">        #表示consul上面的KEY值(或者说文件的名字) 默认是data</span><br><span class="line">        data-key: configuration</span><br><span class="line">        #prefix设置配置值的基本文件夹</span><br><span class="line">        prefix: config</span><br><span class="line">        #defaultContext设置所有应用程序使用的文件夹名</span><br><span class="line">        default-context: $&#123;spring.application.name&#125;</span><br><span class="line">      discovery:</span><br><span class="line">        #开启consul服务发现</span><br><span class="line">        enabled: true</span><br><span class="line">        #开启consul服务的名称</span><br><span class="line">        service-name: consul-user</span><br><span class="line">        #服务检查的路径</span><br><span class="line">        health-check-path: /actuator/health</span><br><span class="line">        #服务检查的时间间隔</span><br><span class="line">        health-check-interval: 10s</span><br><span class="line">        #服务检查的完整路径</span><br><span class="line">        health-check-url: http://192.168.0.101:$&#123;server.port&#125;$&#123;spring.cloud.consul.discovery.health-check-path&#125;</span><br><span class="line">        tags: dev</span><br></pre></td></tr></table></figure></p>
-<p>启动主工程,查看consul ui发现程序正常注册<br><img src="/images/java/springcloud/consul/user/consul_ui.png"></p>
-<p><font color="#eb4d4b">如果程序未能正常注册，查看程序是否正常启动或者这里的ip需要写成程序所在机器的ip,consul集群所在的机器能够访问</font><br><img src="/images/java/springcloud/consul/user/consul_ui_fail.png"></p>
-<h2 id="初始化H2数据库"><a href="#初始化H2数据库" class="headerlink" title="初始化H2数据库"></a>初始化H2数据库</h2><p>由于已经使用了consul作为配置中心,直接在consul配置界面新增如下配置<br><img src="/images/java/springcloud/consul/user/consul_h2.png"><br>启动之后发现datasource循环依赖<br><img src="/images/java/springcloud/consul/user/consul_datasource_circle.png"><br>这时候决定手动初始化datasource,同时集成第三方数据库连接池进来，详情<strong><a href="/2018/10/26/springboot集成druid/" title="springboot集成druid">springboot集成druid</a></strong><br>此时consul上的配置如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:h2:mem:test #内存</span><br><span class="line">    #url: jdbc:h2:file:~/.h2/testdb #文件</span><br><span class="line">    driverClassName: org.h2.Driver</span><br><span class="line">    username: sa</span><br><span class="line">    password: 123456</span><br><span class="line">    platform: h2</span><br><span class="line">    schema: classpath:db/schema.sql</span><br><span class="line">    data: classpath:db/data.sql</span><br><span class="line">    initialization-mode: always #springboot2.0加上上述sql才会执行</span><br><span class="line">    # 下面为druid连接池的补充设置，应用到上面所有数据源中</span><br><span class="line">    # 初始化大小，最小，最大</span><br><span class="line">    initialSize: 1</span><br><span class="line">    minIdle: 3</span><br><span class="line">    maxActive: 20</span><br><span class="line">    # 配置获取连接等待超时的时间</span><br><span class="line">    maxWait: 60000</span><br><span class="line">    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒</span><br><span class="line">    timeBetweenEvictionRunsMillis: 60000</span><br><span class="line">    # 配置一个连接在池中最小生存的时间，单位是毫秒</span><br><span class="line">    minEvictableIdleTimeMillis: 30000</span><br><span class="line">    validationQuery: select &apos;x&apos;</span><br><span class="line">    testWhileIdle: true</span><br><span class="line">    testOnBorrow: false</span><br><span class="line">    testOnReturn: false</span><br><span class="line">    # 打开PSCache，并且指定每个连接上PSCache的大小</span><br><span class="line">    poolPreparedStatements: true</span><br><span class="line">    maxPoolPreparedStatementPerConnectionSize: 20</span><br><span class="line">    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计</span><br><span class="line">    filters: stat</span><br><span class="line">    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录</span><br><span class="line">    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</span><br><span class="line">    # 合并多个DruidDataSource的监控数据</span><br><span class="line">    useGlobalDataSourceStat: true </span><br><span class="line">  h2:</span><br><span class="line">    console:</span><br><span class="line">      settings:</span><br><span class="line">        web-allow-others: true #进行该配置后，h2 web consloe就可以在远程访问了。否则只能在本机访问。</span><br><span class="line">      path: /h2-console #进行该配置，你就可以通过YOUR_URL/h2-console访问h2 web consloe。YOUR_URL是你程序的访问URl。</span><br><span class="line">      enabled: true #进行该配置，程序开启时就会启动h2 web consloe。当然这是默认的，如果你不想在启动程序时启动h2 web consloe，那么就设置为false。</span><br><span class="line">logging:</span><br><span class="line">  level:</span><br><span class="line">    root: INFO</span><br><span class="line">    org.hibernate: INFO</span><br><span class="line">    org.hibernate.type.descriptor.sql.BasicBinder: TRACE</span><br><span class="line">    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE</span><br></pre></td></tr></table></figure></p>
-<p>根据配置在resources目录下，新增db文件夹，下面新增schema.sql和data.sql文件，内容分别如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">drop table user if exists;</span><br><span class="line">create table user (id bigint generated by default as identity ,username varchar(40),name varchar(20),age int(3),balance decimal(10,2),primary key (id));</span><br><span class="line"></span><br><span class="line">insert into user (id,username,name,age,balance) values (1,&apos;admin&apos;,&apos;zb&apos;,20,100.00);</span><br><span class="line">insert into user (id,username,name,age,balance) values (2,&apos;liuman&apos;,&apos;柳曼&apos;,20,101.00);</span><br></pre></td></tr></table></figure></p>
-<p>在pom中添加依赖druid<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.1.10&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在主程序平级目录新增db目录，新增DataSourceBean.java和DatasourceConf.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@Component</span><br><span class="line">@Data</span><br><span class="line">public class DataSourceBean &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(DataSourceBean.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    DatasourceConf datasourceConf;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public DataSource getDataSource() &#123;</span><br><span class="line">        DruidDataSource datasource = new DruidDataSource();</span><br><span class="line">        datasource.setUrl(datasourceConf.getUrl());</span><br><span class="line">        datasource.setUsername(datasourceConf.getUsername());</span><br><span class="line">        datasource.setPassword(datasourceConf.getPassword());</span><br><span class="line">        datasource.setDriverClassName(datasourceConf.getDriverClassName());</span><br><span class="line">        //configuration</span><br><span class="line">        datasource.setInitialSize(datasourceConf.getInitialSize());</span><br><span class="line">        datasource.setMinIdle(datasourceConf.getMinIdle());</span><br><span class="line">        datasource.setMaxActive(datasourceConf.getMaxActive());</span><br><span class="line">        datasource.setMaxWait(datasourceConf.getMaxWait());</span><br><span class="line">        datasource.setTimeBetweenEvictionRunsMillis(datasourceConf.getTimeBetweenEvictionRunsMillis());</span><br><span class="line">        datasource.setMinEvictableIdleTimeMillis(datasourceConf.getMinEvictableIdleTimeMillis());</span><br><span class="line">        datasource.setValidationQuery(datasourceConf.getValidationQuery());</span><br><span class="line">        datasource.setTestWhileIdle(datasourceConf.getTestWhileIdle());</span><br><span class="line">        datasource.setTestOnBorrow(datasourceConf.getTestOnBorrow());</span><br><span class="line">        datasource.setTestOnReturn(datasourceConf.getTestOnReturn());</span><br><span class="line">        datasource.setPoolPreparedStatements(datasourceConf.getPoolPreparedStatements());</span><br><span class="line">        datasource.setMaxPoolPreparedStatementPerConnectionSize(datasourceConf.getMaxPoolPreparedStatementPerConnectionSize());</span><br><span class="line">        datasource.setUseGlobalDataSourceStat(datasourceConf.getUseGlobalDataSourceStat());</span><br><span class="line">        try &#123;</span><br><span class="line">            datasource.setFilters(datasourceConf.getFilters());</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            LOGGER.error(&quot;druid configuration initialization filter: &quot; + e);</span><br><span class="line">        &#125;</span><br><span class="line">        datasource.setConnectionProperties(datasourceConf.getConnectionProperties());</span><br><span class="line">        return datasource;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 配置监控服务器</span><br><span class="line">     *</span><br><span class="line">     * @return 返回监控注册的servlet对象</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public ServletRegistrationBean statViewServlet() &#123;</span><br><span class="line">        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), &quot;/druid/*&quot;);</span><br><span class="line">        // 添加IP白名单</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;allow&quot;, &quot;192.168.14.32,127.0.0.1&quot;);</span><br><span class="line">        // 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;deny&quot;, &quot;192.168.14.32&quot;);</span><br><span class="line">        // 添加控制台管理用户</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;druid&quot;);</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;123456&quot;);</span><br><span class="line">        // 是否能够重置数据</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;false&quot;);</span><br><span class="line">        return servletRegistrationBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 配置服务过滤器</span><br><span class="line">     *</span><br><span class="line">     * @return 返回过滤器配置对象</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public FilterRegistrationBean statFilter() &#123;</span><br><span class="line">        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());</span><br><span class="line">        // 添加过滤规则</span><br><span class="line">        filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);</span><br><span class="line">        // 忽略过滤格式</span><br><span class="line">        filterRegistrationBean.addInitParameter(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*,&quot;);</span><br><span class="line">        return filterRegistrationBean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)</span><br><span class="line">@Component</span><br><span class="line">@Data</span><br><span class="line">public class DatasourceConf &#123;</span><br><span class="line"></span><br><span class="line">    private String url;</span><br><span class="line">    private String username;</span><br><span class="line">    private String password;</span><br><span class="line">    private String driverClassName;</span><br><span class="line">    private int initialSize;</span><br><span class="line">    private int minIdle;</span><br><span class="line">    private int maxActive;</span><br><span class="line">    private int maxWait;</span><br><span class="line">    private int timeBetweenEvictionRunsMillis;</span><br><span class="line">    private int minEvictableIdleTimeMillis;</span><br><span class="line">    private String validationQuery;</span><br><span class="line">    private Boolean testWhileIdle;</span><br><span class="line">    private Boolean testOnBorrow;</span><br><span class="line">    private Boolean testOnReturn;</span><br><span class="line">    private Boolean poolPreparedStatements;</span><br><span class="line">    private int maxPoolPreparedStatementPerConnectionSize;</span><br><span class="line">    private String filters;</span><br><span class="line">    private String connectionProperties;</span><br><span class="line">    private Boolean useGlobalDataSourceStat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>重新启动主程序，此时会报一个小错，具体原因是由于druid开启了如下配置，当数据库为h2并且需要执<br>行新增表操作时，sql统计分析会合并异常，具体看<a href="https://github.com/alibaba/druid/issues/1686" target="_blank" rel="noopener">github上面的issue</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 配置监控统计拦截的filters，去掉后监控界面sql无法统计</span><br><span class="line">filters: stat</span><br></pre></td></tr></table></figure></p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>1.springcloud Finchley.SR2版本<br>
+2.springboot 版本2.0.6.RELEASE<br>
+3.h2<br>
+4.jooq<br>
+5.consul<br>
+搭建一个用户微服务</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>利用idea快速搭建一个springcloud集成上述功能的微服务，可以查询用户</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="初始化工程"><a class="markdownIt-Anchor" href="#初始化工程"></a> 初始化工程</h2>
+<p>方法跟**<a href="/2018/10/23/springcloud集成consul/" title="springcloud集成consul">springcloud集成consul</a>**中前期准备工程一般，勾选下列依赖</p>
+<img src="/images/java/springcloud/consul/user/idea_build.png">
+<p>在resources文件夹下新增bootstrap.yml文件，写入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#tomcat启动启动端口</span><br><span class="line">server:</span><br><span class="line">  port: 1016</span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    #项目名称</span><br><span class="line">    name: consul-user</span><br><span class="line">  cloud:</span><br><span class="line">    consul:</span><br><span class="line">      #consul server的host或者ip</span><br><span class="line">      host: localhost</span><br><span class="line">      #consul server的端口</span><br><span class="line">      port: 18500</span><br><span class="line">      config:</span><br><span class="line">        #开启consul配置中心</span><br><span class="line">        enabled: true</span><br><span class="line">        #consul表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES</span><br><span class="line">        format: YAML</span><br><span class="line">        #表示consul上面的KEY值(或者说文件的名字) 默认是data</span><br><span class="line">        data-key: configuration</span><br><span class="line">        #prefix设置配置值的基本文件夹</span><br><span class="line">        prefix: config</span><br><span class="line">        #defaultContext设置所有应用程序使用的文件夹名</span><br><span class="line">        default-context: $&#123;spring.application.name&#125;</span><br><span class="line">      discovery:</span><br><span class="line">        #开启consul服务发现</span><br><span class="line">        enabled: true</span><br><span class="line">        #开启consul服务的名称</span><br><span class="line">        service-name: consul-user</span><br><span class="line">        #服务检查的路径</span><br><span class="line">        health-check-path: /actuator/health</span><br><span class="line">        #服务检查的时间间隔</span><br><span class="line">        health-check-interval: 10s</span><br><span class="line">        #服务检查的完整路径</span><br><span class="line">        health-check-url: http://192.168.0.101:$&#123;server.port&#125;$&#123;spring.cloud.consul.discovery.health-check-path&#125;</span><br><span class="line">        tags: dev</span><br></pre></td></tr></table></figure>
+<p>启动主工程,查看consul ui发现程序正常注册</p>
+<img src="/images/java/springcloud/consul/user/consul_ui.png">
+<p><font color="#eb4d4b">如果程序未能正常注册，查看程序是否正常启动或者这里的ip需要写成程序所在机器的ip,consul集群所在的机器能够访问</font></p>
+<img src="/images/java/springcloud/consul/user/consul_ui_fail.png">
+<h2 id="初始化h2数据库"><a class="markdownIt-Anchor" href="#初始化h2数据库"></a> 初始化H2数据库</h2>
+<p>由于已经使用了consul作为配置中心,直接在consul配置界面新增如下配置</p>
+<img src="/images/java/springcloud/consul/user/consul_h2.png">
+<p>启动之后发现datasource循环依赖</p>
+<img src="/images/java/springcloud/consul/user/consul_datasource_circle.png">
+<p>这时候决定手动初始化datasource,同时集成第三方数据库连接池进来，详情**<a href="/2018/10/26/springboot集成druid/" title="springboot集成druid">springboot集成druid</a>**<br>
+此时consul上的配置如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    url: jdbc:h2:mem:test #内存</span><br><span class="line">    #url: jdbc:h2:file:~/.h2/testdb #文件</span><br><span class="line">    driverClassName: org.h2.Driver</span><br><span class="line">    username: sa</span><br><span class="line">    password: 123456</span><br><span class="line">    platform: h2</span><br><span class="line">    schema: classpath:db/schema.sql</span><br><span class="line">    data: classpath:db/data.sql</span><br><span class="line">    initialization-mode: always #springboot2.0加上上述sql才会执行</span><br><span class="line">    # 下面为druid连接池的补充设置，应用到上面所有数据源中</span><br><span class="line">    # 初始化大小，最小，最大</span><br><span class="line">    initialSize: 1</span><br><span class="line">    minIdle: 3</span><br><span class="line">    maxActive: 20</span><br><span class="line">    # 配置获取连接等待超时的时间</span><br><span class="line">    maxWait: 60000</span><br><span class="line">    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒</span><br><span class="line">    timeBetweenEvictionRunsMillis: 60000</span><br><span class="line">    # 配置一个连接在池中最小生存的时间，单位是毫秒</span><br><span class="line">    minEvictableIdleTimeMillis: 30000</span><br><span class="line">    validationQuery: select &apos;x&apos;</span><br><span class="line">    testWhileIdle: true</span><br><span class="line">    testOnBorrow: false</span><br><span class="line">    testOnReturn: false</span><br><span class="line">    # 打开PSCache，并且指定每个连接上PSCache的大小</span><br><span class="line">    poolPreparedStatements: true</span><br><span class="line">    maxPoolPreparedStatementPerConnectionSize: 20</span><br><span class="line">    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计</span><br><span class="line">    filters: stat</span><br><span class="line">    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录</span><br><span class="line">    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</span><br><span class="line">    # 合并多个DruidDataSource的监控数据</span><br><span class="line">    useGlobalDataSourceStat: true </span><br><span class="line">  h2:</span><br><span class="line">    console:</span><br><span class="line">      settings:</span><br><span class="line">        web-allow-others: true #进行该配置后，h2 web consloe就可以在远程访问了。否则只能在本机访问。</span><br><span class="line">      path: /h2-console #进行该配置，你就可以通过YOUR_URL/h2-console访问h2 web consloe。YOUR_URL是你程序的访问URl。</span><br><span class="line">      enabled: true #进行该配置，程序开启时就会启动h2 web consloe。当然这是默认的，如果你不想在启动程序时启动h2 web consloe，那么就设置为false。</span><br><span class="line">logging:</span><br><span class="line">  level:</span><br><span class="line">    root: INFO</span><br><span class="line">    org.hibernate: INFO</span><br><span class="line">    org.hibernate.type.descriptor.sql.BasicBinder: TRACE</span><br><span class="line">    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE</span><br></pre></td></tr></table></figure>
+<p>根据配置在resources目录下，新增db文件夹，下面新增schema.sql和data.sql文件，内容分别如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">drop table user if exists;</span><br><span class="line">create table user (id bigint generated by default as identity ,username varchar(40),name varchar(20),age int(3),balance decimal(10,2),primary key (id));</span><br><span class="line"></span><br><span class="line">insert into user (id,username,name,age,balance) values (1,&apos;admin&apos;,&apos;zb&apos;,20,100.00);</span><br><span class="line">insert into user (id,username,name,age,balance) values (2,&apos;liuman&apos;,&apos;柳曼&apos;,20,101.00);</span><br></pre></td></tr></table></figure>
+<p>在pom中添加依赖druid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;druid&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.1.10&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>在主程序平级目录新增db目录，新增DataSourceBean.java和DatasourceConf.java</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@Component</span><br><span class="line">@Data</span><br><span class="line">public class DataSourceBean &#123;</span><br><span class="line"></span><br><span class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(DataSourceBean.class);</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    DatasourceConf datasourceConf;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public DataSource getDataSource() &#123;</span><br><span class="line">        DruidDataSource datasource = new DruidDataSource();</span><br><span class="line">        datasource.setUrl(datasourceConf.getUrl());</span><br><span class="line">        datasource.setUsername(datasourceConf.getUsername());</span><br><span class="line">        datasource.setPassword(datasourceConf.getPassword());</span><br><span class="line">        datasource.setDriverClassName(datasourceConf.getDriverClassName());</span><br><span class="line">        //configuration</span><br><span class="line">        datasource.setInitialSize(datasourceConf.getInitialSize());</span><br><span class="line">        datasource.setMinIdle(datasourceConf.getMinIdle());</span><br><span class="line">        datasource.setMaxActive(datasourceConf.getMaxActive());</span><br><span class="line">        datasource.setMaxWait(datasourceConf.getMaxWait());</span><br><span class="line">        datasource.setTimeBetweenEvictionRunsMillis(datasourceConf.getTimeBetweenEvictionRunsMillis());</span><br><span class="line">        datasource.setMinEvictableIdleTimeMillis(datasourceConf.getMinEvictableIdleTimeMillis());</span><br><span class="line">        datasource.setValidationQuery(datasourceConf.getValidationQuery());</span><br><span class="line">        datasource.setTestWhileIdle(datasourceConf.getTestWhileIdle());</span><br><span class="line">        datasource.setTestOnBorrow(datasourceConf.getTestOnBorrow());</span><br><span class="line">        datasource.setTestOnReturn(datasourceConf.getTestOnReturn());</span><br><span class="line">        datasource.setPoolPreparedStatements(datasourceConf.getPoolPreparedStatements());</span><br><span class="line">        datasource.setMaxPoolPreparedStatementPerConnectionSize(datasourceConf.getMaxPoolPreparedStatementPerConnectionSize());</span><br><span class="line">        datasource.setUseGlobalDataSourceStat(datasourceConf.getUseGlobalDataSourceStat());</span><br><span class="line">        try &#123;</span><br><span class="line">            datasource.setFilters(datasourceConf.getFilters());</span><br><span class="line">        &#125; catch (SQLException e) &#123;</span><br><span class="line">            LOGGER.error(&quot;druid configuration initialization filter: &quot; + e);</span><br><span class="line">        &#125;</span><br><span class="line">        datasource.setConnectionProperties(datasourceConf.getConnectionProperties());</span><br><span class="line">        return datasource;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 配置监控服务器</span><br><span class="line">     *</span><br><span class="line">     * @return 返回监控注册的servlet对象</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public ServletRegistrationBean statViewServlet() &#123;</span><br><span class="line">        ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), &quot;/druid/*&quot;);</span><br><span class="line">        // 添加IP白名单</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;allow&quot;, &quot;192.168.14.32,127.0.0.1&quot;);</span><br><span class="line">        // 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;deny&quot;, &quot;192.168.14.32&quot;);</span><br><span class="line">        // 添加控制台管理用户</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;druid&quot;);</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;123456&quot;);</span><br><span class="line">        // 是否能够重置数据</span><br><span class="line">        servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;false&quot;);</span><br><span class="line">        return servletRegistrationBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 配置服务过滤器</span><br><span class="line">     *</span><br><span class="line">     * @return 返回过滤器配置对象</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public FilterRegistrationBean statFilter() &#123;</span><br><span class="line">        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());</span><br><span class="line">        // 添加过滤规则</span><br><span class="line">        filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);</span><br><span class="line">        // 忽略过滤格式</span><br><span class="line">        filterRegistrationBean.addInitParameter(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*,&quot;);</span><br><span class="line">        return filterRegistrationBean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)</span><br><span class="line">@Component</span><br><span class="line">@Data</span><br><span class="line">public class DatasourceConf &#123;</span><br><span class="line"></span><br><span class="line">    private String url;</span><br><span class="line">    private String username;</span><br><span class="line">    private String password;</span><br><span class="line">    private String driverClassName;</span><br><span class="line">    private int initialSize;</span><br><span class="line">    private int minIdle;</span><br><span class="line">    private int maxActive;</span><br><span class="line">    private int maxWait;</span><br><span class="line">    private int timeBetweenEvictionRunsMillis;</span><br><span class="line">    private int minEvictableIdleTimeMillis;</span><br><span class="line">    private String validationQuery;</span><br><span class="line">    private Boolean testWhileIdle;</span><br><span class="line">    private Boolean testOnBorrow;</span><br><span class="line">    private Boolean testOnReturn;</span><br><span class="line">    private Boolean poolPreparedStatements;</span><br><span class="line">    private int maxPoolPreparedStatementPerConnectionSize;</span><br><span class="line">    private String filters;</span><br><span class="line">    private String connectionProperties;</span><br><span class="line">    private Boolean useGlobalDataSourceStat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重新启动主程序，此时会报一个小错，具体原因是由于druid开启了如下配置，当数据库为h2并且需要执<br>
+行新增表操作时，sql统计分析会合并异常，具体看<a href="https://github.com/alibaba/druid/issues/1686" target="_blank" rel="noopener">github上面的issue</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 配置监控统计拦截的filters，去掉后监控界面sql无法统计</span><br><span class="line">filters: stat</span><br></pre></td></tr></table></figure>
 <img src="/images/java/springcloud/consul/user/druid_stat_error.png">
-<p>检查<br>1.查看h2 ui,是否user表和数据是否写入 <a href="http://localhost:1016/h2-console/" target="_blank" rel="noopener">http://localhost:1016/h2-console/</a><br>2.查看druid监控页面 <a href="http://127.0.0.1:1016/druid/sql.html" target="_blank" rel="noopener">http://127.0.0.1:1016/druid/sql.html</a><br><img src="/images/java/springcloud/consul/user/h2_ui.png"><br><img src="/images/java/springcloud/consul/user/druid_sql_stat.png"></p>
-<h2 id="集成jooq-generate工具"><a href="#集成jooq-generate工具" class="headerlink" title="集成jooq generate工具"></a>集成jooq generate工具</h2><p>具体教程可见<strong><a href="/2018/10/26/springboot集成jooq/" title="springboot集成jooq">springboot集成jooq</a></strong></p>
-<p><font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font><br>在maven package时，由于集成了jooq generate工具，会执行一遍，这样如果自己修改了相关类会被还原，所以在打包时希望不执行相关驱动可以加如下配置</p>
-<p><font color="#eb4d4b">放在pom驱动配置的configuration标签内<br>20181030更新:注意这个标签添加之后，无论编译打包甚至直接运行这个插件都不再生成相关东西，如果你现在需要重新运行一遍，请先提交或者保存你做过的修改，然后注释掉这个，运行完之后再加上，然后再将你做的修改重新添加回来</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- install 跳过 --&gt;</span><br><span class="line">&lt;skip&gt;true&lt;/skip&gt;</span><br></pre></td></tr></table></figure><br><img src="/images/java/springcloud/consul/user/package_skip_plugins.jpg"><br>在打包的过程中，执行了springboot中的一些test，当从consul上远程读取yml配置时爆了如下错，忽略测试打包成功后，启动工程仍然报错，然而idea中自己run的时候却没有报错<br>对比了相关命令<br><img src="/images/java/springcloud/consul/user/consul_config_utf8_fail.png"><br>远程yml配置中含有中文，务必在使用java -Dfile.encoding=UTF-8 -jar .\consul-user-0.0.1-SNAPSHOT.jar指定utf8编码<br>不然打包会失败，启动失败，会报上面的错<br><a href="https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-spring-example/pom.xml" target="_blank" rel="noopener">https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-spring-example/pom.xml</a></p>
+<p>检查<br>
+1.查看h2 ui,是否user表和数据是否写入 <a href="http://localhost:1016/h2-console/" target="_blank" rel="noopener">http://localhost:1016/h2-console/</a><br>
+2.查看druid监控页面 <a href="http://127.0.0.1:1016/druid/sql.html" target="_blank" rel="noopener">http://127.0.0.1:1016/druid/sql.html</a></p>
+<img src="/images/java/springcloud/consul/user/h2_ui.png">
+<img src="/images/java/springcloud/consul/user/druid_sql_stat.png">
+<h2 id="集成jooq-generate工具"><a class="markdownIt-Anchor" href="#集成jooq-generate工具"></a> 集成jooq generate工具</h2>
+<p>具体教程可见**<a href="/2018/10/26/springboot集成jooq/" title="springboot集成jooq">springboot集成jooq</a>**<br>
+<font color="#2ecc71" size="4"><i class="fa fa-spinner fa-spin"></i>扩展</font><br>
+在maven package时，由于集成了jooq generate工具，会执行一遍，这样如果自己修改了相关类会被还原，所以在打包时希望不执行相关驱动可以加如下配置<br>
+<font color="#eb4d4b">放在pom驱动配置的configuration标签内<br>
+20181030更新:注意这个标签添加之后，无论编译打包甚至直接运行这个插件都不再生成相关东西，如果你现在需要重新运行一遍，请先提交或者保存你做过的修改，然后注释掉这个，运行完之后再加上，然后再将你做的修改重新添加回来</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- install 跳过 --&gt;</span><br><span class="line">&lt;skip&gt;true&lt;/skip&gt;</span><br></pre></td></tr></table></figure>
+<img src="/images/java/springcloud/consul/user/package_skip_plugins.jpg">
+<p>在打包的过程中，执行了springboot中的一些test，当从consul上远程读取yml配置时爆了如下错，忽略测试打包成功后，启动工程仍然报错，然而idea中自己run的时候却没有报错<br>
+对比了相关命令</p>
+<img src="/images/java/springcloud/consul/user/consul_config_utf8_fail.png">
+<p>远程yml配置中含有中文，务必在使用java -Dfile.encoding=UTF-8 -jar .\consul-user-0.0.1-SNAPSHOT.jar指定utf8编码<br>
+不然打包会失败，启动失败，会报上面的错<br>
+<a href="https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-spring-example/pom.xml" target="_blank" rel="noopener">https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-spring-example/pom.xml</a></p>
 
       
     </div>
@@ -461,7 +490,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -496,9 +525,9 @@
           
             <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/jooq/" rel="tag"># jooq</a>
-          
             <a href="/tags/springcloud/" rel="tag"># springcloud</a>
+          
+            <a href="/tags/jooq/" rel="tag"># jooq</a>
           
             <a href="/tags/h2/" rel="tag"># h2</a>
           
@@ -596,9 +625,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -611,7 +638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -622,7 +649,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -633,7 +660,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -682,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化工程"><span class="nav-number">3.1.</span> <span class="nav-text">初始化工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化H2数据库"><span class="nav-number">3.2.</span> <span class="nav-text">初始化H2数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成jooq-generate工具"><span class="nav-number">3.3.</span> <span class="nav-text">集成jooq generate工具</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化工程"><span class="nav-number">3.1.</span> <span class="nav-text"> 初始化工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化h2数据库"><span class="nav-number">3.2.</span> <span class="nav-text"> 初始化H2数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成jooq-generate工具"><span class="nav-number">3.3.</span> <span class="nav-text"> 集成jooq generate工具</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -727,7 +754,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -865,26 +892,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/10/26/springcloud编写用户微服务/';
-          this.page.identifier = '2018/10/26/springcloud编写用户微服务/';
-          this.page.title = 'springcloud编写用户微服务';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -900,6 +907,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -911,7 +922,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

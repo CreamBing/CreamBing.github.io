@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,springcloud,feign," />
+  <meta name="keywords" content="java,springcloud,feign,">
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="前言Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。 目的1.springcloud Finchley.SR2版本">
+<meta name="description" content="前言 Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。 Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。  目的 1.springcloud Finchley.">
 <meta name="keywords" content="java,springcloud,feign">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springcloud集成feign">
 <meta property="og:url" content="https://creambing.github.io/2018/10/29/springcloud集成feign/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。 目的1.springcloud Finchley.SR2版本">
+<meta property="og:description" content="前言 Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。 Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。  目的 1.springcloud Finchley.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/feign/idea_feign.jpg">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/feign/dir_feign.jpg">
 <meta property="og:updated_time" content="2018-10-30T09:54:40.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springcloud集成feign">
-<meta name="twitter:description" content="前言Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。 目的1.springcloud Finchley.SR2版本">
+<meta name="twitter:description" content="前言 Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。 Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。  目的 1.springcloud Finchley.">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/springcloud/consul/feign/idea_feign.jpg">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/10/29/springcloud集成feign/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/10/29/springcloud集成feign/">
 
 
 
@@ -157,7 +157,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -187,7 +187,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -197,7 +197,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -207,7 +207,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -217,7 +217,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -230,7 +230,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -251,9 +251,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -294,7 +292,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -330,7 +328,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -377,17 +375,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/29/springcloud集成feign/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/29/springcloud集成feign/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -396,7 +383,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -417,21 +404,40 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。<br>Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>1.springcloud Finchley.SR2版本<br>2.springboot 版本2.0.6.RELEASE<br>以consul为服务发现和配置中心的前提下，集成一个针对<strong><a href="/2018/10/26/springcloud编写用户微服务/" title="springcloud编写用户微服务">springcloud编写用户微服务</a></strong>的用户消费服务<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="初始化工程"><a href="#初始化工程" class="headerlink" title="初始化工程"></a>初始化工程</h2><p>方法跟<strong><a href="/2018/10/23/springcloud集成consul/" title="springcloud集成consul">springcloud集成consul</a></strong>中前期准备工程一般，勾选下列依赖<br><img src="/images/java/springcloud/consul/feign/idea_feign.jpg"><br>如果不是上述方法初始化，添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在resources文件夹下新增bootstrap.yml文件，写入以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#tomcat启动启动端口</span><br><span class="line">server:</span><br><span class="line">  port: 1020</span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    #项目名称</span><br><span class="line">    name: consul-feign</span><br><span class="line">  cloud:</span><br><span class="line">    consul:</span><br><span class="line">      #consul server的host或者ip</span><br><span class="line">      host: localhost</span><br><span class="line">      #consul server的端口</span><br><span class="line">      port: 18500</span><br><span class="line">      config:</span><br><span class="line">        #开启consul配置中心</span><br><span class="line">        enabled: true</span><br><span class="line">        #consul表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES</span><br><span class="line">        format: YAML</span><br><span class="line">        #表示consul上面的KEY值(或者说文件的名字) 默认是data</span><br><span class="line">        data-key: configuration</span><br><span class="line">        #prefix设置配置值的基本文件夹</span><br><span class="line">        prefix: config</span><br><span class="line">        #defaultContext设置所有应用程序使用的文件夹名</span><br><span class="line">        default-context: $&#123;spring.application.name&#125;</span><br><span class="line">      discovery:</span><br><span class="line">        #开启consul服务发现</span><br><span class="line">        enabled: true</span><br><span class="line">        #开启consul服务的名称</span><br><span class="line">        service-name: consul-feign</span><br><span class="line">        #服务检查的路径</span><br><span class="line">        health-check-path: /actuator/health</span><br><span class="line">        #服务检查的时间间隔</span><br><span class="line">        health-check-interval: 10s</span><br><span class="line">        #服务检查的完整路径</span><br><span class="line">        health-check-url: http://192.168.0.150:$&#123;server.port&#125;$&#123;spring.cloud.consul.discovery.health-check-path&#125;</span><br><span class="line">        tags: dev</span><br></pre></td></tr></table></figure></p>
-<h2 id="添加controller类和feign接口"><a href="#添加controller类和feign接口" class="headerlink" title="添加controller类和feign接口"></a>添加controller类和feign接口</h2><p>这里的user类就是<a href="/2018/10/26/springcloud编写用户微服务/" title="springcloud编写用户微服务">springcloud编写用户微服务</a>中jooq-codegen-maven3.10.8生成的实体对象<br>所以最好是将这些实体模块化，这样在共同需要的地方引用即可，不用像我这样图简便就直接复制过来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/user&quot;)</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    UserFeignClient userFeignClient;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;/getAll&quot;,method = RequestMethod.GET)</span><br><span class="line">    public List&lt;User&gt; getAll()&#123;</span><br><span class="line">        return userFeignClient.getAllUser();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@FeignClient(name = &quot;consul-user&quot;)</span><br><span class="line">public interface UserFeignClient &#123;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;/user/getAll&quot;,method = RequestMethod.GET)</span><br><span class="line">    List&lt;User&gt; getAllUser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<font color="#eb4d4b">20181030更新:get多参数写法</font>
-
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>Feign是声明式、模板化的HTTP客户端，可以更加快捷优雅的调用HTTP API。在部分场景下和Ribbon类似，都是进行数据的请求处理，但是在请求参数使用实体类的时候显然更加方便，同时还支持安全性、授权控制等。<br>
+Feign是集成了Ribbon的，也就是说如果引入了Feign，那么Ribbon的功能也能使用，比如修改负载均衡策略等。</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>1.springcloud Finchley.SR2版本<br>
+2.springboot 版本2.0.6.RELEASE<br>
+以consul为服务发现和配置中心的前提下，集成一个针对**<a href="/2018/10/26/springcloud编写用户微服务/" title="springcloud编写用户微服务">springcloud编写用户微服务</a>**的用户消费服务</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="初始化工程"><a class="markdownIt-Anchor" href="#初始化工程"></a> 初始化工程</h2>
+<p>方法跟**<a href="/2018/10/23/springcloud集成consul/" title="springcloud集成consul">springcloud集成consul</a>**中前期准备工程一般，勾选下列依赖</p>
+<img src="/images/java/springcloud/consul/feign/idea_feign.jpg">
+<p>如果不是上述方法初始化，添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>在resources文件夹下新增bootstrap.yml文件，写入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#tomcat启动启动端口</span><br><span class="line">server:</span><br><span class="line">  port: 1020</span><br><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    #项目名称</span><br><span class="line">    name: consul-feign</span><br><span class="line">  cloud:</span><br><span class="line">    consul:</span><br><span class="line">      #consul server的host或者ip</span><br><span class="line">      host: localhost</span><br><span class="line">      #consul server的端口</span><br><span class="line">      port: 18500</span><br><span class="line">      config:</span><br><span class="line">        #开启consul配置中心</span><br><span class="line">        enabled: true</span><br><span class="line">        #consul表示consul上面文件的格式 有四种 YAML PROPERTIES KEY-VALUE FILES</span><br><span class="line">        format: YAML</span><br><span class="line">        #表示consul上面的KEY值(或者说文件的名字) 默认是data</span><br><span class="line">        data-key: configuration</span><br><span class="line">        #prefix设置配置值的基本文件夹</span><br><span class="line">        prefix: config</span><br><span class="line">        #defaultContext设置所有应用程序使用的文件夹名</span><br><span class="line">        default-context: $&#123;spring.application.name&#125;</span><br><span class="line">      discovery:</span><br><span class="line">        #开启consul服务发现</span><br><span class="line">        enabled: true</span><br><span class="line">        #开启consul服务的名称</span><br><span class="line">        service-name: consul-feign</span><br><span class="line">        #服务检查的路径</span><br><span class="line">        health-check-path: /actuator/health</span><br><span class="line">        #服务检查的时间间隔</span><br><span class="line">        health-check-interval: 10s</span><br><span class="line">        #服务检查的完整路径</span><br><span class="line">        health-check-url: http://192.168.0.150:$&#123;server.port&#125;$&#123;spring.cloud.consul.discovery.health-check-path&#125;</span><br><span class="line">        tags: dev</span><br></pre></td></tr></table></figure>
+<h2 id="添加controller类和feign接口"><a class="markdownIt-Anchor" href="#添加controller类和feign接口"></a> 添加controller类和feign接口</h2>
+<p>这里的user类就是<a href="/2018/10/26/springcloud编写用户微服务/" title="springcloud编写用户微服务">springcloud编写用户微服务</a>中jooq-codegen-maven3.10.8生成的实体对象<br>
+所以最好是将这些实体模块化，这样在共同需要的地方引用即可，不用像我这样图简便就直接复制过来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/user&quot;)</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    UserFeignClient userFeignClient;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;/getAll&quot;,method = RequestMethod.GET)</span><br><span class="line">    public List&lt;User&gt; getAll()&#123;</span><br><span class="line">        return userFeignClient.getAllUser();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@FeignClient(name = &quot;consul-user&quot;)</span><br><span class="line">public interface UserFeignClient &#123;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;/user/getAll&quot;,method = RequestMethod.GET)</span><br><span class="line">    List&lt;User&gt; getAllUser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><font color="#eb4d4b">20181030更新:get多参数写法</font></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">直接写Long id或者直接是User user这种对象，feign依然会用post方式调用，所以会报错接口不支持</span><br><span class="line">需要用@RequestParam(&quot;id&quot;) Long id，或者@RequestParam Map&lt;String,Object&gt; map</span><br></pre></td></tr></table></figure>
-<p>最终的工程结构<br><img src="/images/java/springcloud/consul/feign/dir_feign.jpg"></p>
-<h2 id="修改主类"><a href="#修改主类" class="headerlink" title="修改主类"></a>修改主类</h2><font color="#eb4d4b">主类上添加@EnableFeignClients注解，否则报错找不到UserFeignClient</font>
+<p>最终的工程结构</p>
+<img src="/images/java/springcloud/consul/feign/dir_feign.jpg">
+<h2 id="修改主类"><a class="markdownIt-Anchor" href="#修改主类"></a> 修改主类</h2>
+<p><font color="#eb4d4b">主类上添加@EnableFeignClients注解，否则报错找不到UserFeignClient</font></p>
+<h2 id="集成健康检查和hystrix"><a class="markdownIt-Anchor" href="#集成健康检查和hystrix"></a> 集成健康检查和hystrix</h2>
+<p><strong>添加依赖</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">健康检查需加依赖</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">hystrix需加</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>远程配置添加健康检查详细监控以及支持hystrix</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#Actuator的健康检查开启所有包括health，info，metrics等</span><br><span class="line">management:</span><br><span class="line">  endpoints:</span><br><span class="line">    web:</span><br><span class="line">      exposure:</span><br><span class="line">        include: &quot;*&quot;</span><br><span class="line">  #开启health端点详细检查</span><br><span class="line">  endpoint:</span><br><span class="line">    health:</span><br><span class="line">      show-details: always</span><br><span class="line">feign:</span><br><span class="line">  hystrix:</span><br><span class="line">    enabled: true</span><br></pre></td></tr></table></figure>
+<p><strong>修改主类</strong><br>
+<font color="#eb4d4b">主类上添加@EnableHystrix注解，否则没有/actuator/hystrix.stream信息，另外上面的配置需要打开，不然没数据</font></p>
 
-<h2 id="集成健康检查和hystrix"><a href="#集成健康检查和hystrix" class="headerlink" title="集成健康检查和hystrix"></a>集成健康检查和hystrix</h2><p><strong>添加依赖</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">健康检查需加依赖</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">hystrix需加</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>远程配置添加健康检查详细监控以及支持hystrix</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#Actuator的健康检查开启所有包括health，info，metrics等</span><br><span class="line">management:</span><br><span class="line">  endpoints:</span><br><span class="line">    web:</span><br><span class="line">      exposure:</span><br><span class="line">        include: &quot;*&quot;</span><br><span class="line">  #开启health端点详细检查</span><br><span class="line">  endpoint:</span><br><span class="line">    health:</span><br><span class="line">      show-details: always</span><br><span class="line">feign:</span><br><span class="line">  hystrix:</span><br><span class="line">    enabled: true</span><br></pre></td></tr></table></figure></p>
-<p><strong>修改主类</strong></p>
-<font color="#eb4d4b">主类上添加@EnableHystrix注解，否则没有/actuator/hystrix.stream信息，另外上面的配置需要打开，不然没数据</font>
       
     </div>
     
@@ -441,7 +447,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -574,9 +580,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -589,7 +593,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -600,7 +604,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -611,7 +615,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -660,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化工程"><span class="nav-number">3.1.</span> <span class="nav-text">初始化工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加controller类和feign接口"><span class="nav-number">3.2.</span> <span class="nav-text">添加controller类和feign接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主类"><span class="nav-number">3.3.</span> <span class="nav-text">修改主类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成健康检查和hystrix"><span class="nav-number">3.4.</span> <span class="nav-text">集成健康检查和hystrix</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化工程"><span class="nav-number">3.1.</span> <span class="nav-text"> 初始化工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加controller类和feign接口"><span class="nav-number">3.2.</span> <span class="nav-text"> 添加controller类和feign接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改主类"><span class="nav-number">3.3.</span> <span class="nav-text"> 修改主类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成健康检查和hystrix"><span class="nav-number">3.4.</span> <span class="nav-text"> 集成健康检查和hystrix</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -705,7 +709,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -843,26 +847,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/10/29/springcloud集成feign/';
-          this.page.identifier = '2018/10/29/springcloud集成feign/';
-          this.page.title = 'springcloud集成feign';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -878,6 +862,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -889,7 +877,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

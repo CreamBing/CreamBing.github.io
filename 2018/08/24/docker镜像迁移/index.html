@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="docker,镜像,迁移," />
+  <meta name="keywords" content="docker,镜像,迁移,">
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="前言一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库所以这篇博客主要是讲手动导出镜像的方法 目的手动导出镜像以便于在其他地方使用">
+<meta name="description" content="前言 一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库 所以这篇博客主要是讲手动导出镜像的方法  目的 手动导出镜像以便于在其他地方使用">
 <meta name="keywords" content="docker,镜像,迁移">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker镜像迁移">
 <meta property="og:url" content="https://creambing.github.io/2018/08/24/docker镜像迁移/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库所以这篇博客主要是讲手动导出镜像的方法 目的手动导出镜像以便于在其他地方使用">
+<meta property="og:description" content="前言 一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库 所以这篇博客主要是讲手动导出镜像的方法  目的 手动导出镜像以便于在其他地方使用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/docker/docker_save.png">
 <meta property="og:image" content="https://creambing.github.io/images/docker/docker_load.png">
@@ -93,7 +93,7 @@
 <meta property="og:updated_time" content="2018-10-16T04:55:08.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker镜像迁移">
-<meta name="twitter:description" content="前言一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库所以这篇博客主要是讲手动导出镜像的方法 目的手动导出镜像以便于在其他地方使用">
+<meta name="twitter:description" content="前言 一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库 所以这篇博客主要是讲手动导出镜像的方法  目的 手动导出镜像以便于在其他地方使用">
 <meta name="twitter:image" content="https://creambing.github.io/images/docker/docker_save.png">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/08/24/docker镜像迁移/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/08/24/docker镜像迁移/">
 
 
 
@@ -158,7 +158,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -188,7 +188,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -198,7 +198,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -208,7 +208,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -218,7 +218,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -231,7 +231,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -252,9 +252,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -295,7 +293,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -331,7 +329,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -367,17 +365,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/08/24/docker镜像迁移/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/24/docker镜像迁移/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -386,7 +373,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -407,12 +394,28 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库<br>所以这篇博客主要是讲手动导出镜像的方法</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>手动导出镜像以便于在其他地方使用<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="查看镜像列表"><a href="#查看镜像列表" class="headerlink" title="查看镜像列表"></a>查看镜像列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-<h2 id="save导出镜像"><a href="#save导出镜像" class="headerlink" title="save导出镜像"></a>save导出镜像</h2><p>指令: <strong><em>docker save repository:tag &gt; 自定义导出名字.tar</em></strong> 推荐<br>或者  <strong><em>docker save image_id &gt; 自定义导出名字.tar</em></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save webapi:0814 &gt; webapi0814.tar</span><br></pre></td></tr></table></figure><br>截图:<br><img src="/images/docker/docker_save.png"></p>
-<h2 id="load导入镜像"><a href="#load导入镜像" class="headerlink" title="load导入镜像"></a>load导入镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -qi webapi0814.tar</span><br></pre></td></tr></table></figure>
-<p>截图:<br><img src="/images/docker/docker_load.png"><br>验证:<br><img src="/images/docker/docker_load_success.png"><br>docker images 查看一下导入情况,这里说明一下,如果之前指令是通过save imageid导出的镜像的话,这里导入的时候仓库和标签名可能为空,推荐save repository:tag导出</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>一般正规的做法应该是将自己做好的镜像push到远程仓库去,然后需要的时候从远处仓库拉取.由于目前我还没有建立私有远程仓库<br>
+所以这篇博客主要是讲手动导出镜像的方法</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>手动导出镜像以便于在其他地方使用</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="查看镜像列表"><a class="markdownIt-Anchor" href="#查看镜像列表"></a> 查看镜像列表</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+<h2 id="save导出镜像"><a class="markdownIt-Anchor" href="#save导出镜像"></a> save导出镜像</h2>
+<p>指令: <em><strong>docker save repository:tag &gt; 自定义导出名字.tar</strong></em> 推荐<br>
+或者  <em><strong>docker save image_id &gt; 自定义导出名字.tar</strong></em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save webapi:0814 &gt; webapi0814.tar</span><br></pre></td></tr></table></figure>
+<p>截图:</p>
+<img src="/images/docker/docker_save.png">
+<h2 id="load导入镜像"><a class="markdownIt-Anchor" href="#load导入镜像"></a> load导入镜像</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -qi webapi0814.tar</span><br></pre></td></tr></table></figure>
+<p>截图:</p>
+<img src="/images/docker/docker_load.png">
+<p>验证:</p>
+<img src="/images/docker/docker_load_success.png">
+<p>docker images 查看一下导入情况,这里说明一下,如果之前指令是通过save imageid导出的镜像的话,这里导入的时候仓库和标签名可能为空,推荐save repository:tag导出</p>
 
       
     </div>
@@ -423,7 +426,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -556,9 +559,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -571,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -582,7 +583,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -593,7 +594,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -642,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看镜像列表"><span class="nav-number">3.1.</span> <span class="nav-text">查看镜像列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#save导出镜像"><span class="nav-number">3.2.</span> <span class="nav-text">save导出镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#load导入镜像"><span class="nav-number">3.3.</span> <span class="nav-text">load导入镜像</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看镜像列表"><span class="nav-number">3.1.</span> <span class="nav-text"> 查看镜像列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#save导出镜像"><span class="nav-number">3.2.</span> <span class="nav-text"> save导出镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#load导入镜像"><span class="nav-number">3.3.</span> <span class="nav-text"> load导入镜像</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -687,7 +688,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -825,26 +826,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/08/24/docker镜像迁移/';
-          this.page.identifier = '2018/08/24/docker镜像迁移/';
-          this.page.title = 'docker镜像迁移';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -860,6 +841,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -871,7 +856,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

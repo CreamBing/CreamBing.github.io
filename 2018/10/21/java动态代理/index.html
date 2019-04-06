@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,动态代理," />
+  <meta name="keywords" content="java,动态代理,">
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="前言java反射基础用法这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法 目的简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理CGLib代理">
+<meta name="description" content="前言 **java反射基础用法**这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法  目的 简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理**CGLib代理**">
 <meta name="keywords" content="java,动态代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java动态代理">
 <meta property="og:url" content="https://creambing.github.io/2018/10/21/java动态代理/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言java反射基础用法这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法 目的简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理CGLib代理">
+<meta property="og:description" content="前言 **java反射基础用法**这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法  目的 简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理**CGLib代理**">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/refect/reflect3.png">
 <meta property="og:image" content="https://creambing.github.io/images/java/refect/reflect4.png">
 <meta property="og:updated_time" content="2018-10-21T08:32:42.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java动态代理">
-<meta name="twitter:description" content="前言java反射基础用法这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法 目的简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理CGLib代理">
+<meta name="twitter:description" content="前言 **java反射基础用法**这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法  目的 简单介绍一下动态代理的用法，JDK提供的代理只能针对接口做代理,我们有更强大的代理**CGLib代理**">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/refect/reflect3.png">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/10/21/java动态代理/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/10/21/java动态代理/">
 
 
 
@@ -157,7 +157,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -187,7 +187,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -197,7 +197,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -207,7 +207,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -217,7 +217,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -230,7 +230,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -251,9 +251,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -294,7 +292,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -330,7 +328,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -366,17 +364,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/10/21/java动态代理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/10/21/java动态代理/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -385,7 +372,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -406,15 +393,24 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><strong><a href="/2018/10/15/java反射基础用法/" title="java反射基础用法">java反射基础用法</a></strong>这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>简单介绍一下动态代理的用法，<font color="#eb4d4b">JDK提供的代理只能针对接口做代理,我们有更强大的代理<strong><a href="/2018/10/21/CGLib代理/" title="CGLib代理">CGLib代理</a></strong></font></p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>**<a href="/2018/10/15/java反射基础用法/" title="java反射基础用法">java反射基础用法</a>**这边博客讲解了java反射的一些基础用法，那么动态代理就是利用反射实现的一个高级用法</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>简单介绍一下动态代理的用法，<font color="#eb4d4b">JDK提供的代理只能针对接口做代理,我们有更强大的代理**<a href="/2018/10/21/CGLib代理/" title="CGLib代理">CGLib代理</a>**</font></p>
 <a id="more"></a>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>假设有个personservice服务类接口以及实现类，现如今需要在尽可能少量修改代码的前提下，让原来的方法增加一些其他方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public interface PersonService &#123;</span><br><span class="line"></span><br><span class="line">    //插入一个person</span><br><span class="line">    int insert(Object obj);</span><br><span class="line"></span><br><span class="line">    //更新一个person</span><br><span class="line">    int update(Object obj);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class PersonServiceImpl implements PersonService &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int insert(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功插入一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int update(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功更新一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class SimplePersonServiceProxy implements  PersonService&#123;</span><br><span class="line"></span><br><span class="line">    //被代理接口类</span><br><span class="line">    private PersonService personService;</span><br><span class="line"></span><br><span class="line">    public SimplePersonServiceProxy(PersonService personService) &#123;</span><br><span class="line">        this.personService = personService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int insert(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;SimplePersonServiceProxy 插入静态代理方法&quot;);</span><br><span class="line">        return personService.insert(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int update(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;SimplePersonServiceProxy 更新静态代理方法&quot;);</span><br><span class="line">        return personService.update(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        //增加功能的调用方法，原来的PersonService和PersonServiceImpl代码都不需要变</span><br><span class="line">        PersonService proxy = new SimplePersonServiceProxy(new PersonServiceImpl());</span><br><span class="line">        proxy.insert(new Object());</span><br><span class="line">        proxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>执行结果:<br><img src="/images/java/refect/reflect3.png"></p>
-<h2 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class DynamicProxyHandler implements InvocationHandler &#123;</span><br><span class="line"></span><br><span class="line">    //被代理对象，这里跟静态代理对比，这里的代码扩展性更高，可以是任何对象</span><br><span class="line">    private Object object;</span><br><span class="line"></span><br><span class="line">    public DynamicProxyHandler(Object object) &#123;</span><br><span class="line">        this.object = object;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;DynamicProxyHandler java动态代理方法&quot;);</span><br><span class="line">        return method.invoke(object,args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        //增加功能的调用方法，原来的PersonService和PersonServiceImpl代码都不需要变</span><br><span class="line">        PersonService proxy = (PersonService) Proxy.newProxyInstance(PersonService.class.getClassLoader(),new</span><br><span class="line">        Class[]&#123;PersonService.class&#125;,new DynamicProxyHandler(new PersonServiceImpl()));</span><br><span class="line">        proxy.insert(new Object());</span><br><span class="line">        proxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>执行结果:<br><img src="/images/java/refect/reflect4.png"><br>对比两种方式，我们可以得出结论<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">相同点:</span><br><span class="line">    1.两个都新增了一个代理类，并且属性都是代理类，只不过静态代理的属性限制的更大，必须是</span><br><span class="line">    代理接口类</span><br><span class="line">    2.两种方式都不需要修改接口类以及实现类，只需要修改调用的地方即可，利用代理类调用</span><br><span class="line">不同点</span><br><span class="line">    1.静态代理需要实现代理接口，并且属性为代理类接口，这说明每个接口都需要实现一个静态代</span><br><span class="line">    理类，扩展性不高，正因为如此，其每个代理的类中的方法可以各自写相关的代理方法</span><br><span class="line">    2.动态代理类由于其属性为Object,所以可以代理任何接口,扩展性高，不过由于每个方法执行</span><br><span class="line">    前的代理方法都是一样的，所以更适合做一些通用的代理</span><br></pre></td></tr></table></figure></p>
-
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<p>假设有个personservice服务类接口以及实现类，现如今需要在尽可能少量修改代码的前提下，让原来的方法增加一些其他方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public interface PersonService &#123;</span><br><span class="line"></span><br><span class="line">    //插入一个person</span><br><span class="line">    int insert(Object obj);</span><br><span class="line"></span><br><span class="line">    //更新一个person</span><br><span class="line">    int update(Object obj);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class PersonServiceImpl implements PersonService &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int insert(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功插入一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int update(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;成功更新一个person&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="静态代理"><a class="markdownIt-Anchor" href="#静态代理"></a> 静态代理</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public class SimplePersonServiceProxy implements  PersonService&#123;</span><br><span class="line"></span><br><span class="line">    //被代理接口类</span><br><span class="line">    private PersonService personService;</span><br><span class="line"></span><br><span class="line">    public SimplePersonServiceProxy(PersonService personService) &#123;</span><br><span class="line">        this.personService = personService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int insert(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;SimplePersonServiceProxy 插入静态代理方法&quot;);</span><br><span class="line">        return personService.insert(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int update(Object obj) &#123;</span><br><span class="line">        System.out.println(&quot;SimplePersonServiceProxy 更新静态代理方法&quot;);</span><br><span class="line">        return personService.update(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        //增加功能的调用方法，原来的PersonService和PersonServiceImpl代码都不需要变</span><br><span class="line">        PersonService proxy = new SimplePersonServiceProxy(new PersonServiceImpl());</span><br><span class="line">        proxy.insert(new Object());</span><br><span class="line">        proxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果:</p>
+<img src="/images/java/refect/reflect3.png">
+<h2 id="动态代理"><a class="markdownIt-Anchor" href="#动态代理"></a> 动态代理</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class DynamicProxyHandler implements InvocationHandler &#123;</span><br><span class="line"></span><br><span class="line">    //被代理对象，这里跟静态代理对比，这里的代码扩展性更高，可以是任何对象</span><br><span class="line">    private Object object;</span><br><span class="line"></span><br><span class="line">    public DynamicProxyHandler(Object object) &#123;</span><br><span class="line">        this.object = object;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123;</span><br><span class="line">        System.out.println(&quot;DynamicProxyHandler java动态代理方法&quot;);</span><br><span class="line">        return method.invoke(object,args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //原来的调用方式</span><br><span class="line">        PersonService personService = new PersonServiceImpl();</span><br><span class="line">        personService.insert(new Object());</span><br><span class="line">        personService.update(new Object());</span><br><span class="line">        System.out.println(&quot;**********************&quot;);</span><br><span class="line">        //增加功能的调用方法，原来的PersonService和PersonServiceImpl代码都不需要变</span><br><span class="line">        PersonService proxy = (PersonService) Proxy.newProxyInstance(PersonService.class.getClassLoader(),new</span><br><span class="line">        Class[]&#123;PersonService.class&#125;,new DynamicProxyHandler(new PersonServiceImpl()));</span><br><span class="line">        proxy.insert(new Object());</span><br><span class="line">        proxy.update(new Object());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果:</p>
+<img src="/images/java/refect/reflect4.png">
+<p>对比两种方式，我们可以得出结论</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">相同点:</span><br><span class="line">    1.两个都新增了一个代理类，并且属性都是代理类，只不过静态代理的属性限制的更大，必须是</span><br><span class="line">    代理接口类</span><br><span class="line">    2.两种方式都不需要修改接口类以及实现类，只需要修改调用的地方即可，利用代理类调用</span><br><span class="line">不同点</span><br><span class="line">    1.静态代理需要实现代理接口，并且属性为代理类接口，这说明每个接口都需要实现一个静态代</span><br><span class="line">    理类，扩展性不高，正因为如此，其每个代理的类中的方法可以各自写相关的代理方法</span><br><span class="line">    2.动态代理类由于其属性为Object,所以可以代理任何接口,扩展性高，不过由于每个方法执行</span><br><span class="line">    前的代理方法都是一样的，所以更适合做一些通用的代理</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -424,7 +420,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -555,9 +551,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -570,7 +564,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -581,7 +575,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -592,7 +586,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -641,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态代理"><span class="nav-number">3.1.</span> <span class="nav-text">静态代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态代理"><span class="nav-number">3.2.</span> <span class="nav-text">动态代理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态代理"><span class="nav-number">3.1.</span> <span class="nav-text"> 静态代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态代理"><span class="nav-number">3.2.</span> <span class="nav-text"> 动态代理</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -686,7 +680,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -824,26 +818,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/10/21/java动态代理/';
-          this.page.identifier = '2018/10/21/java动态代理/';
-          this.page.title = 'java动态代理';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -859,6 +833,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -870,7 +848,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">

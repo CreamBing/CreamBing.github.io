@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,springcloud,sidecar,node," />
+  <meta name="keywords" content="java,springcloud,sidecar,node,">
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="前言由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来 目的利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
+<meta name="description" content="前言 由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来  目的 利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
 <meta name="keywords" content="java,springcloud,sidecar,node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Sidecar来整合非jvm微服务">
 <meta property="og:url" content="https://creambing.github.io/2018/11/21/使用Sidecar来整合非jvm微服务/index.html">
 <meta property="og:site_name" content="技术之路">
-<meta property="og:description" content="前言由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来 目的利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
+<meta property="og:description" content="前言 由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来  目的 利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/sidecar/plugins-nodejs.png">
 <meta property="og:image" content="https://creambing.github.io/images/java/springcloud/consul/sidecar/build-node.jpg">
@@ -93,7 +93,7 @@
 <meta property="og:updated_time" content="2018-11-21T11:56:01.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Sidecar来整合非jvm微服务">
-<meta name="twitter:description" content="前言由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来 目的利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
+<meta name="twitter:description" content="前言 由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来  目的 利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务">
 <meta name="twitter:image" content="https://creambing.github.io/images/java/springcloud/consul/sidecar/plugins-nodejs.png">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://creambing.github.io/2018/11/21/使用Sidecar来整合非jvm微服务/"/>
+  <link rel="canonical" href="https://creambing.github.io/2018/11/21/使用Sidecar来整合非jvm微服务/">
 
 
 
@@ -158,7 +158,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">技术之路</span>
         <span class="logo-line-after"><i></i></span>
@@ -188,7 +188,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -198,7 +198,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -208,7 +208,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -218,7 +218,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -231,7 +231,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -252,9 +252,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -295,7 +293,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cream Bing">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar20180821.gif">
     </span>
 
@@ -331,7 +329,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -378,17 +376,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/11/21/使用Sidecar来整合非jvm微服务/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/11/21/使用Sidecar来整合非jvm微服务/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -397,7 +384,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -418,13 +405,26 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务<br><a id="more"></a></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="利用idea新建一个node项目"><a href="#利用idea新建一个node项目" class="headerlink" title="利用idea新建一个node项目"></a>利用idea新建一个node项目</h2><p>在idea中新建一个node工程，没有的话，先添加nodejs插件<br><img src="/images/java/springcloud/consul/sidecar/plugins-nodejs.png"><br><img src="/images/java/springcloud/consul/sidecar/build-node.jpg"></p>
-<h2 id="编写node项目，添加health端点"><a href="#编写node项目，添加health端点" class="headerlink" title="编写node项目，添加health端点"></a>编写node项目，添加health端点</h2><p>在app.js中添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> healthRouter = <span class="built_in">require</span>(<span class="string">'./routes/health'</span>);</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/health'</span>, healthRouter);</span><br></pre></td></tr></table></figure></p>
-<p>在routes中添加health.js中添加如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET users listing. */</span></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    res.send(<span class="built_in">JSON</span>.stringify(&#123;<span class="string">"status"</span>:<span class="string">"UP"</span>&#125;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure></p>
-<p>访问<a href="http://localhost:3000/health显示" target="_blank" rel="noopener">http://localhost:3000/health显示</a><br><img src="/images/java/springcloud/consul/sidecar/node-health.png"></p>
-<h2 id="编写java-sidecar整合这个node服务"><a href="#编写java-sidecar整合这个node服务" class="headerlink" title="编写java sidecar整合这个node服务"></a>编写java sidecar整合这个node服务</h2><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>由于语言多样，系统复杂，有时候一个健壮的系统可能是由多种语言组成的，针对一个非jvm的接口平台，我们可以利用sidecar整合进来</p>
+<h1 id="目的"><a class="markdownIt-Anchor" href="#目的"></a> 目的</h1>
+<p>利用zuul可以调用已经注册到注册中心的服务，利用sidecar调用非jvm的服务，这样就可以对外提供一个整合了jvm和非jvm的网关服务</p>
+<a id="more"></a>
+<h1 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文</h1>
+<h2 id="利用idea新建一个node项目"><a class="markdownIt-Anchor" href="#利用idea新建一个node项目"></a> 利用idea新建一个node项目</h2>
+<p>在idea中新建一个node工程，没有的话，先添加nodejs插件</p>
+<img src="/images/java/springcloud/consul/sidecar/plugins-nodejs.png">
+<img src="/images/java/springcloud/consul/sidecar/build-node.jpg">
+<h2 id="编写node项目添加health端点"><a class="markdownIt-Anchor" href="#编写node项目添加health端点"></a> 编写node项目，添加health端点</h2>
+<p>在app.js中添加</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> healthRouter = <span class="built_in">require</span>(<span class="string">'./routes/health'</span>);</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/health'</span>, healthRouter);</span><br></pre></td></tr></table></figure>
+<p>在routes中添加health.js中添加如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET users listing. */</span></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    res.send(<span class="built_in">JSON</span>.stringify(&#123;<span class="string">"status"</span>:<span class="string">"UP"</span>&#125;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+<p>访问http://localhost:3000/health显示</p>
+<img src="/images/java/springcloud/consul/sidecar/node-health.png">
+<h2 id="编写java-sidecar整合这个node服务"><a class="markdownIt-Anchor" href="#编写java-sidecar整合这个node服务"></a> 编写java sidecar整合这个node服务</h2>
+<h1 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h1>
+
       
     </div>
     
@@ -434,7 +434,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/weixingongzhonghao.jpg" alt="Cream Bing wechat" style="width: 200px; max-width: 100%;">
     <div>subscribe to my blog by scanning my public wechat account</div>
 </div>
 
@@ -569,9 +569,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar20180821.gif"
-                alt="Cream Bing" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar20180821.gif" alt="Cream Bing">
             
               <p class="site-author-name" itemprop="name">Cream Bing</p>
               <p class="site-description motion-element" itemprop="description">深话浅说,长路慢走</p>
@@ -584,7 +582,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -595,7 +593,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -606,7 +604,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -655,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用idea新建一个node项目"><span class="nav-number">3.1.</span> <span class="nav-text">利用idea新建一个node项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写node项目，添加health端点"><span class="nav-number">3.2.</span> <span class="nav-text">编写node项目，添加health端点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写java-sidecar整合这个node服务"><span class="nav-number">3.3.</span> <span class="nav-text">编写java sidecar整合这个node服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">2.</span> <span class="nav-text"> 目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text"> 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用idea新建一个node项目"><span class="nav-number">3.1.</span> <span class="nav-text"> 利用idea新建一个node项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写node项目添加health端点"><span class="nav-number">3.2.</span> <span class="nav-text"> 编写node项目，添加health端点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写java-sidecar整合这个node服务"><span class="nav-number">3.3.</span> <span class="nav-text"> 编写java sidecar整合这个node服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text"> 参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -700,7 +698,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
@@ -838,26 +836,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://disqus.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://creambing.github.io/2018/11/21/使用Sidecar来整合非jvm微服务/';
-          this.page.identifier = '2018/11/21/使用Sidecar来整合非jvm微服务/';
-          this.page.title = '使用Sidecar来整合非jvm微服务';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://disqus.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -873,6 +851,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -884,7 +866,7 @@
 
 
   
-    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
     <script type="text/javascript">
